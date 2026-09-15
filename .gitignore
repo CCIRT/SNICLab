@@ -1,0 +1,22 @@
+# Build outputs, downloaded Linux sources, and dependency caches.
+/build/
+/.cache/
+
+# Cargo outputs in the root workspace and nested crates.
+target/
+
+# Generated MilvusVisor UEFI boot volume.
+/MilvusVisor/src/bin/
+
+# VM logs, PID files, and shared-memory backing files.
+*.log
+*.pid
+*.ivshmem
+
+# Editor and OS temporary files.
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Keep the root Cargo.lock for reproducible builds.

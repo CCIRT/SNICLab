@@ -1,0 +1,1995 @@
+diff --git a/src/QEMU_EFI.fd b/src/QEMU_EFI.fd
+new file mode 100644
+index 0000000..5ab05ea
+--- /dev/null
++++ b/src/QEMU_EFI.fd
+@@ -0,0 +1,223 @@
++<!DOCTYPE html><html lang="en"> <head><title>Contact | Linaro</title><meta property="description" content="Linaro empowers rapid product deployment within the dynamic ARM ecosystem. Our cutting-edge solutions and collaborative platform facilitate the swift development, testing, and delivery of ARM-based innovations, enabling businesses to stay ahead in today's competitive technology landscape.
++"><meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="utf-8"><script type="module" src="/_astro/Cookies.astro_astro_type_script_index_0_lang.C44ux30d.js"></script><script>
++    (function (w, d, s, l, i) {
++      w[l] = w[l] || [];
++      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
++      var f = d.getElementsByTagName(s)[0],
++        j = d.createElement(s),
++        dl = l != "dataLayer" ? "&l=" + l : "";
++      j.async = true;
++      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
++      f.parentNode.insertBefore(j, f);
++    })(window, document, "script", "dataLayer", "GTM-5DLPJQ");
++  </script><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000"><link rel="alternate" type="application/rss+xml" title="Linaro.org" href="https://www.linaro.org/rss/news.xml"><link rel="alternate" type="application/rss+xml" title="Linaro.org" href="https://www.linaro.org/rss/blog.xml"><link rel="alternate" type="application/rss+xml" title="Linaro.org" href="https://www.linaro.org/feed.xml"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff"><title>Contact | Linaro</title><link rel="canonical" href="https://www.linaro.org/contact/"><meta name="description" content="Linaro empowers rapid product deployment within the dynamic ARM ecosystem. Our cutting-edge solutions and collaborative platform facilitate the swift development, testing, and delivery of ARM-based innovations, enabling businesses to stay ahead in today's competitive technology landscape.
++"><meta name="robots" content="index, follow"><meta property="og:title" content="Contact | Linaro"><meta property="og:type" content="website"><meta property="og:image" content><meta property="og:url" content="https://www.linaro.org/contact/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact | Linaro"><meta name="twitter:description" content="Linaro empowers rapid product deployment within the dynamic ARM ecosystem. Our cutting-edge solutions and collaborative platform facilitate the swift development, testing, and delivery of ARM-base..."><meta name="twitter:creator" content="@LinaroOrg"><link rel="me" href="https://mastodon.org.uk/@LinaroLtd@mastodon.social"><meta name="twitter:image" content><meta property="og:image" content><meta property="og:description" content="Linaro empowers rapid product deployment within the dynamic ARM ecosystem. Our cutting-edge solutions and collaborative platform facilitate the swift development, testing, and delivery of ARM-based innovations, enabling businesses to stay ahead in today's competitive technology landscape.
++"><link rel="stylesheet" href="https://use.typekit.net/job6bfm.css"><link rel="stylesheet" href="/_astro/_post_.CdXyc632.css">
++<style>.hero-carousel-gradient-border[data-astro-cid-wcskevpa]{border:1px solid transparent;background-image:linear-gradient(#2a2730,#2a2730),var(--background-image-linaro-gradient);background-origin:padding-box,border-box;background-clip:padding-box,border-box}.hero-carousel-slide-bg[data-astro-cid-wcskevpa]{background-size:50%;background-position:right center}.hero-carousel-slide-full-bg[data-astro-cid-wcskevpa]{background-size:cover;background-position:center}.hero-carousel-overlay-light[data-astro-cid-wcskevpa]{background:linear-gradient(to right,rgba(42,39,48,.85) 0%,rgba(42,39,48,.4) 45%,rgba(42,39,48,.1) 75%,transparent 100%);pointer-events:none}.hero-carousel-track[data-astro-cid-wcskevpa]{transform:translate(calc(-1 * var(--carousel-index) * (100% / var(--carousel-total))))}.hero-carousel-overlay[data-astro-cid-wcskevpa]{background:linear-gradient(to right,rgba(42,39,48,.97) 0%,rgba(42,39,48,.88) 35%,rgba(42,39,48,.5) 60%,rgba(42,39,48,.15) 82%,transparent 100%);pointer-events:none}@media(max-width:1023px){.hero-carousel-slide-bg[data-astro-cid-wcskevpa]{background-image:none!important}.hero-carousel-overlay[data-astro-cid-wcskevpa]{background:#2a2730f2}}.hero-background-image[data-astro-cid-ar5v7lgx]{background-image:var(--backgroundUrl)}.hero-dark-overlay[data-astro-cid-ar5v7lgx]{background:#22202566}.container-background-image[data-astro-cid-ekmpyda2]{background-image:var(--backgroundUrl)}dialog[data-astro-cid-46a3xhej]::backdrop{position:fixed;inset:0;background:#0006}dialog[data-astro-cid-q6mfjifq]::backdrop{position:fixed;inset:0;background:#0006}.expanded-card[data-astro-cid-u5ghfpqf]{grid-column:span var(--grid-cols) / span var(--grid-cols)}.card[data-astro-cid-u5ghfpqf]{transition:all .4s ease}dialog[data-astro-cid-rjekxfvy]::backdrop{position:fixed;inset:0;background:#0006}@media(min-width:1024px){.neutrum-evidence-cta[data-astro-cid-45urhyl7] .neutrum-cta-row-fixed[data-astro-cid-45urhyl7]{height:var(--neutrum-cta-height)}}.neutrum-evidence-cta[data-astro-cid-45urhyl7] .neutrum-cta-diagram[data-astro-cid-45urhyl7]{min-height:0}.neutrum-evidence-cta[data-astro-cid-45urhyl7] .neutrum-cta-diagram-inner[data-astro-cid-45urhyl7]{flex-shrink:1}.neutrum-evidence-cta[data-astro-cid-45urhyl7] .neutrum-cta-text[data-astro-cid-45urhyl7]{min-height:0}.neutrum-evidence-cta[data-astro-cid-45urhyl7] .neutrum-cta-text-inner[data-astro-cid-45urhyl7]{flex-shrink:1}dialog[data-astro-cid-y7bqqv2v]::backdrop{position:fixed;inset:0;background:#0006}.member-image[data-astro-cid-wj54qfbm]{margin-top:1em;margin-bottom:1em}.teamtailor-jobs__job-title{font-size:1.25rem;line-height:1.75rem}
++</style></head><body class="min-h-screen flex flex-col text-white"> <header class="w-full relative fade-border-bottom bg-background z-50" id="top-nav"> <div class="flex flex-col lg:flex-row justify-start items-center lg:items-start text-white max-w-7xl xl:container mx-auto px-8 my-3 lg:mt-4 lg:mb-5 lg:text-sm xl:text-[1rem] w-full py-4"> <div class="flex w-full lg:w-auto items-start justify-between pt-1 min-w-[125px] xl:min-w-[150px]"> <a href="/" class="text-lg"><img src="https://res.cloudinary.com/dl7c2wmhi/image/upload/v1/linaro-website/graphics/logo?_a=DATAiZXyZAA0" loading="lazy" decoding="async" alt="Linaro Logo" class="h-auto w-[125px] xl:w-[150px] mt-[-2px] ml-[-10px]" width="500" height="500"></a> <div class="block lg:hidden pr-8"> <button id="astronav-menu" aria-label="Toggle Menu">  <svg fill="currentColor" class="w-6 h-6 text-white" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <title>Toggle Menu</title> <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path> <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path> </svg>  </button> </div> </div> <div class="w-full basis-full"> <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 font-medium lg:justify-start "> <ul class="flex flex-col lg:flex-row items-start lg:items-center lg:mx-auto max-w-2xl lg:mx-0 w-full lg:max-w-full relative gap-4 lg:gap-0 my-8 lg:my-0 has-[.open]:mb-10"> <menu class="astronav-dropdown group relative" aria-expanded="false" data-nav-group="Services" data-astro-cid-e7c5y66u> <div class="duration-300" data-astro-cid-e7c5y66u> <button class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 xl:py-3 hover:linaro-gradient-text nav-inactive" data-astro-cid-e7c5y66u> <span data-astro-cid-e7c5y66u>Services</span> </button> </div> <div class=" astronav-dropdown dropdown-toggle hidden" aria-expanded="false" data-astro-cid-e7c5y66u> <div class=" lg:absolute z-10 mt-1 lg:left-0 w-max min-w-[240px] max-w-[360px]" data-astro-cid-e7c5y66u> <div class="flex flex-col w-full min-w-0 bg-background py-2 lg:rounded-xl lg:border lg:border-white/10 lg:shadow-lg" data-astro-cid-e7c5y66u> <a href="/services/upstreaming-linux-kernel" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Upstream Linux Kernel Services </a><a href="/services/bsp-development" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> BSP Development </a><a href="/services/qualcomm-platform" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Qualcomm Platform Services </a><a href="/services/nxp-platform-services" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> NXP Platform Services </a><a href="/services/testingandautomation" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Test Automation </a><a href="/services/virtualization" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Virtualization </a> </div> </div> </div> </menu> <menu class="astronav-dropdown group relative" aria-expanded="false" data-nav-group="Solutions" data-astro-cid-e7c5y66u> <div class="duration-300" data-astro-cid-e7c5y66u> <button class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 xl:py-3 hover:linaro-gradient-text nav-inactive" data-astro-cid-e7c5y66u> <span data-astro-cid-e7c5y66u>Solutions</span> </button> </div> <div class=" astronav-dropdown dropdown-toggle hidden" aria-expanded="false" data-astro-cid-e7c5y66u> <div class=" lg:absolute z-10 mt-1 lg:left-0 w-max min-w-[240px] max-w-[360px]" data-astro-cid-e7c5y66u> <div class="flex flex-col w-full min-w-0 bg-background py-2 lg:rounded-xl lg:border lg:border-white/10 lg:shadow-lg" data-astro-cid-e7c5y66u> <a href="https://www.linaroforge.com" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_blank" data-astro-cid-e7c5y66u> Linaro Forge </a><a href="/solutions/onelab" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> ONELab </a><a href="/solutions/oneboot" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Unified Firmware Lifecycle </a><a href="/solutions/confidential-computing" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Confidential Computing </a><a href="/solutions/cra" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Cyber Resilience Act </a> </div> </div> </div> </menu> <menu class="astronav-dropdown group relative" aria-expanded="false" data-nav-group="Industries" data-astro-cid-e7c5y66u> <div class="duration-300" data-astro-cid-e7c5y66u> <button class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 xl:py-3 hover:linaro-gradient-text nav-inactive" data-astro-cid-e7c5y66u> <span data-astro-cid-e7c5y66u>Industries</span> </button> </div> <div class=" astronav-dropdown dropdown-toggle hidden" aria-expanded="false" data-astro-cid-e7c5y66u> <div class=" lg:absolute z-10 mt-1 lg:left-0 w-max min-w-[240px] max-w-[360px]" data-astro-cid-e7c5y66u> <div class="flex flex-col w-full min-w-0 bg-background py-2 lg:rounded-xl lg:border lg:border-white/10 lg:shadow-lg" data-astro-cid-e7c5y66u> <a href="/industries/industrial" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Industrial </a><a href="/industries/automotive" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Automotive </a><a href="/industries/client-devices" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Client Devices </a><a href="/industries/enterprise" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Enterprise </a> </div> </div> </div> </menu> <menu class="astronav-dropdown group relative" aria-expanded="false" data-nav-group="Resources" data-astro-cid-e7c5y66u> <div class="duration-300" data-astro-cid-e7c5y66u> <button class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 xl:py-3 hover:linaro-gradient-text nav-inactive" data-astro-cid-e7c5y66u> <span data-astro-cid-e7c5y66u>Resources</span> </button> </div> <div class=" astronav-dropdown dropdown-toggle hidden" aria-expanded="false" data-astro-cid-e7c5y66u> <div class=" lg:absolute z-10 mt-1 lg:left-0 w-max min-w-[240px] max-w-[360px]" data-astro-cid-e7c5y66u> <div class="flex flex-col w-full min-w-0 bg-background py-2 lg:rounded-xl lg:border lg:border-white/10 lg:shadow-lg" data-astro-cid-e7c5y66u> <a href="/downloads" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Downloads </a><a href="/blog" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Blog </a><a href="/whitepapers" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> White Papers </a><a href="/news" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Newsroom </a><a href="/events" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Events </a><a href="/training" class="px-4 py-2 text-grey hover:text-linaro-yellow cursor-pointer text-sm hover:bg-white/5 break-words" target="_self" data-astro-cid-e7c5y66u> Training </a> </div> </div> </div> </menu> <li class="" aria-label="Company"> <div class="transition"> <a data-nav-group="Company" href="/about" class="flex lg:px-3 py-2 xl:py-3 text-inherit hover:linaro-gradient-text whitespace-nowrap" target="_self"> Company </a> </div> </li> <li class="ml-0 lg:ml-2 xl:ml-8 mt-[2px]"> <a href="/contact"> <div class="linaro-gradient-button-small">Contact us</div> </a> </li> <li class="grow mt-4 lg:mt-0"> <button id="search-modal-open-button" class="ml-auto mr-4 float-right p-2" data-astro-cid-vaub4oed><svg width="20" height="20" data-astro-cid-vaub4oed="true" data-icon="search">   <symbol id="ai:local:search" viewBox="0 0 27 27"><g fill="none"><path fill="url(#a)" d="M11.707.033C5.25.033 0 5.285 0 11.74s5.251 11.707 11.707 11.707c1.973 0 3.913-.469 5.552-1.372q.197.238.435.435l3.344 3.345a3.41 3.41 0 1 0 4.817-4.817l-3.345-3.344a3.4 3.4 0 0 0-.535-.435c.903-1.64 1.471-3.546 1.471-5.552C23.447 5.25 18.197 0 11.74 0zm0 3.345a8.32 8.32 0 0 1 8.361 8.362c0 2.207-.802 4.248-2.207 5.753l-.1.1a3.4 3.4 0 0 0-.435.435c-1.472 1.338-3.479 2.107-5.653 2.107a8.32 8.32 0 0 1-8.362-8.362 8.32 8.32 0 0 1 8.362-8.361z"/><defs><linearGradient id="a" x1="0" x2="27.9" y1=".9" y2="28.8" gradientUnits="userSpaceOnUse"><stop stop-color="#FFCE00"/><stop offset="1" stop-color="#6715E8"/></linearGradient></defs></g></symbol><use href="#ai:local:search"></use>  </svg></button> <div class="relative w-full" data-astro-cid-vaub4oed> <dialog id="search-modal-dialog" class="bg-transparent rounded-xl mx-auto w-full max-w-6xl" data-astro-cid-vaub4oed> <div class="relative bg-background text-white p-4 rounded-xl" data-astro-cid-vaub4oed> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1AxAzA" component-url="/_astro/NavSearch.By9Jy4cl.js" component-export="default" renderer-url="/_astro/client.CeBop7ho.js" props="{&quot;data-astro-cid-vaub4oed&quot;:[0,true]}" ssr client="only" opts="{&quot;name&quot;:&quot;NavSearch&quot;,&quot;value&quot;:&quot;solid-js&quot;}"></astro-island> </div> </dialog> </div> <script type="module">["DOMContentLoaded","astro:after-swap"].forEach(t=>{document.addEventListener(t,d)});function d(){const t=document.getElementById("search-modal-dialog"),o=document.getElementById("search-modal-open-button"),c=document.getElementById("search-modal-close-button");o?.addEventListener("click",()=>{t?.showModal()}),c?.addEventListener("click",()=>{t?.close()}),t.addEventListener("click",function(n){const e=t.getBoundingClientRect();e.top<=n.clientY&&n.clientY<=e.top+e.height&&e.left<=n.clientX&&n.clientX<=e.left+e.width||t.close()})}
++//# sourceMappingURL=SearchModal.astro_astro_type_script_index_0_lang.DPWNzqdz.js.map</script> </li> </ul> </nav> </div> </div> <script>(function(){const closeOnClick = false;
++
++    ["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
++      document.addEventListener(event, addListeners);
++    });
++
++    // Function to clone and replace elements
++    function cloneAndReplace(element) {
++      const clone = element.cloneNode(true);
++      element.parentNode.replaceChild(clone, element);
++    }
++
++    function addListeners() {
++      // Clean up existing listeners
++      const oldMenuButton = document.getElementById("astronav-menu");
++      if (oldMenuButton) {
++        cloneAndReplace(oldMenuButton);
++      }
++
++      const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
++      oldDropdownMenus.forEach((menu) => {
++        cloneAndReplace(menu);
++      });
++
++      // Mobile nav toggle
++      const menuButton = document.getElementById("astronav-menu");
++      menuButton && menuButton.addEventListener("click", toggleMobileNav);
++
++      // Dropdown menus
++      const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
++      dropdownMenus.forEach((menu) => {
++        const button = menu.querySelector("button");
++        button &&
++          button.addEventListener("click", (event) =>
++            toggleDropdownMenu(event, menu, dropdownMenus),
++          );
++
++        // Handle Submenu Dropdowns
++        const dropDownSubmenus = menu.querySelectorAll(
++          ".astronav-dropdown-submenu",
++        );
++
++        dropDownSubmenus.forEach((submenu) => {
++          const submenuButton = submenu.querySelector("button");
++          submenuButton &&
++            submenuButton.addEventListener("click", (event) => {
++              event.stopImmediatePropagation();
++              toggleSubmenuDropdown(event, submenu);
++            });
++        });
++      });
++
++      // Clicking away from dropdown will remove the dropdown class
++      document.addEventListener("click", closeAllDropdowns);
++
++      if (closeOnClick) {
++        handleCloseOnClick();
++      }
++    }
++
++    function toggleMobileNav() {
++      [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
++        el.classList.toggle("hidden");
++      });
++    }
++
++    function toggleDropdownMenu(event, menu, dropdownMenus) {
++      toggleMenu(menu);
++
++      // Close one dropdown when selecting another
++      Array.from(dropdownMenus)
++        .filter((el) => el !== menu && !menu.contains(el))
++        .forEach(closeMenu);
++
++      event.stopPropagation();
++    }
++
++    function toggleSubmenuDropdown(event, submenu) {
++      event.stopPropagation();
++      toggleMenu(submenu);
++
++      // Close sibling submenus at the same nesting level
++      const siblingSubmenus = submenu
++        .closest(".astronav-dropdown")
++        .querySelectorAll(".astronav-dropdown-submenu");
++      Array.from(siblingSubmenus)
++        .filter((el) => el !== submenu && !submenu.contains(el))
++        .forEach(closeMenu);
++    }
++
++    function closeAllDropdowns(event) {
++      const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
++      const dropdownParent = document.querySelectorAll(
++        ".astronav-dropdown, .astronav-dropdown-submenu",
++      );
++      const isButtonInsideDropdown = [
++        ...document.querySelectorAll(
++          ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu",
++        ),
++      ].some((button) => button.contains(event.target));
++      if (!isButtonInsideDropdown) {
++        dropdownMenus.forEach((d) => {
++          d.classList.remove("open");
++          d.removeAttribute("open");
++          d.classList.add("hidden");
++        });
++        dropdownParent.forEach((d) => {
++          d.classList.remove("open");
++          d.removeAttribute("open");
++          d.setAttribute("aria-expanded", "false");
++        });
++      }
++    }
++
++    function toggleMenu(menu) {
++      menu.classList.toggle("open");
++      const expanded = menu.getAttribute("aria-expanded") === "true";
++      menu.setAttribute("aria-expanded", expanded ? "false" : "true");
++      menu.hasAttribute("open")
++        ? menu.removeAttribute("open")
++        : menu.setAttribute("open", "");
++
++      const dropdownToggle = menu.querySelector(".dropdown-toggle");
++      const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
++      dropdownToggle.classList.toggle("hidden");
++      dropdownToggle.setAttribute(
++        "aria-expanded",
++        dropdownExpanded === "true" ? "false" : "true",
++      );
++    }
++
++    function closeMenu(menu) {
++      menu.classList.remove("open");
++      menu.removeAttribute("open");
++      menu.setAttribute("aria-expanded", "false");
++      const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
++      dropdownToggles.forEach((toggle) => {
++        toggle.classList.add("hidden");
++        toggle.setAttribute("aria-expanded", "false");
++      });
++    }
++
++    function handleCloseOnClick() {
++      const navMenuItems = document.querySelector(".astronav-items");
++      const navToggle = document.getElementById("astronav-menu");
++      const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
++
++      const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
++
++      navLink &&
++        navLink.forEach((item) => {
++          item.addEventListener("click", () => {
++            navMenuItems?.classList.add("hidden");
++            MenuIcons.forEach((el) => {
++              el.classList.toggle("hidden");
++            });
++          });
++        });
++    }
++  })();</script> </header>  <main class="prose mx-0 max-w-full prose-invert" data-pagefind-body> <span data-pagefind-meta="title" class="hidden">Contact</span>   <section class="w-full purple-gradient-container !pt-0 !pb-8 !mb-0" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="container mx-auto px-4 md:px-8" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="animate-delay-100 w-full flex flex-col items-center !pt-0 pb-8 invisible" data-animate="animate-fade-down" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="flex flex-col items-center gap-2 md:gap-4 text-center w-full max-w-full pt-0 px-4 pb-4 md:px-8 md:pb-8 w-full max-w-full"> <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl linaro-gradient-text font-bold">
++Contact Linaro
++</h2> <article class="text-white text-base md:text-lg lg:text-xl max-w-2xl w-full px-2"><p>We’d love to hear from you so please send us a message and one of our team will be in touch!</p>
++</article> <div class="w-full max-w-xl min-w-0 px-4 md:px-8"> <form class="flex flex-col items-start gap-3 md:gap-4 w-full min-w-0" id="contact-form" data-contact-form="7" method="get">  <input type="hidden" name="form_id" value="7"> <input type="hidden" name="formName" value="sales_contact">  <label for="firstName" class="sr-only"> First Name </label> <input type="text" name="firstName" required placeholder="First Name" class="text-black pl-2 h-12 w-full">  <label for="lastName" class="sr-only"> Last Name </label> <input type="text" name="lastName" required placeholder="Last Name" class="text-black pl-2 h-12 w-full">  <label for="email" class="sr-only"> Email </label> <input type="email" name="email" required placeholder="Email" class="text-black pl-2 h-12 w-full">  <label for="company" class="sr-only"> Company Name </label> <input type="text" name="company" required placeholder="Company Name" class="text-black pl-2 h-12 w-full">  <label for="phone" class="sr-only"> Telephone Number </label> <input type="tel" name="phone" required placeholder="Telephone Number" class="text-black pl-2 h-12 w-full">  <label for="country" class="sr-only">Country</label> <select name="country" id="country" required class="text-black pl-2 h-12 w-full"> <option value="" disabled selected>Country</option> <option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo (Brazzaville)">Congo (Brazzaville)</option><option value="Congo (Kinshasa)">Congo (Kinshasa)</option><option value="Costa Rica">Costa Rica</option><option value="Côte d'Ivoire">Côte d&#39;Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czechia">Czechia</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="North Korea">North Korea</option><option value="North Macedonia">North Macedonia</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Korea">South Korea</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option> </select> <textarea name="message" required placeholder="How can Linaro help you?" class="text-black pl-2 h-12 w-full h-24"></textarea>  <div id="friendly-captcha-widget" class="frc-captcha"></div> <div> <input type="checkbox" name="agreed" id="agreed" class="mr-2" required> <label for="agreed" class="text-white">I’ve read and agreed to Linaro’s <a href="/legal#privacy" class="text-white">Privacy Policy</a></label> </div> <div class="flex gap-8"> <button type="submit" class="linaro-gradient-button" id="contact-submit">Submit</button> <button type="button" class="linaro-gradient-button flex justify-start items-center gap-2 hidden" id="contact-submitting"> <svg aria-hidden="true" class="w-4 h-4 text-gray-200 animate-spin fill-white" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"></path> <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"></path> </svg>
++Submitting</button>  </div> </form> <div id="contact-feedback" class="hidden"> <p id="contact-feedback-text" class="text-white"></p>  </div> </div> </div></div></div></section><section class="w-full" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="container mx-auto px-4 md:px-8" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="animate-delay-100 w-full flex flex-col items-center !pt-12 py-12 invisible" data-animate="animate-fade-down" data-astro-cid-ekmpyda2 style="--backgroundUrl: url();"><div class="h-px w-[20em] mx-auto bg-gradient-to-r from-transparent to-transparent via-white"></div><ul class="list-none flex flex-wrap ps-0 justify-center gap-24"> <li class="max-w-[40ch] flex flex-col items-center text-center gap-6">   <h3 class="text-4xl !my-0 z-50 whitespace-normal sm:whitespace-nowrap"><span class="text-linaro-yellow">Subscribe to our newsletter</span></h3> <div class="text-xl prose-a:text-blue-300 text-inherit"></div>     <button class="linaro-gradient-button" onclick="window.insight.showModal()" data-astro-cid-46a3xhej>Subscribe</button> <div class="relative w-full" data-astro-cid-46a3xhej> <dialog data-contact-modal="insight" id="insight" class="bg-transparent rounded-xl mx-auto fixed top-0 md:top-[10%] right-0 left-0" data-astro-cid-46a3xhej> <div class="flex flex-col items-center max-w-max" data-astro-cid-46a3xhej> <div class="bg-black lg:min-w-[40rem] max-w-xl rounded-3xl px-8 py-4 w-full"> <form class="flex flex-col items-start gap-8" id="insight-form"> <p class="text-3xl text-white my-2 font-bold">Linaro Insights Newsletter</p> <label for="EMAIL" class="text-white"> Email address </label> <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="name@example.com" class="text-black pl-2 h-12 w-full"> <div hidden="true"> <input type="hidden" name="tags" value="10067453"> <input type="hidden" name="formName" value="newsletter"> </div> <div style="position: absolute; left: -5000px;" aria-hidden="true"> <input type="text" name="b_14baaae786342d0d405ee59c2_bcfa4abc8f" tabindex="-1" value=""> </div> <div> <p class="text-white">Marketing Permissions</p> <p class="text-white">
++Linaro Insights is a monthly newsletter. Please tick the box below to
++        confirm you are happy to receive email communication from Linaro.
++</p> <input type="checkbox" name="email" id="email-insight" class="mr-2" required> <label for="email-insight" class="text-white">Email</label> <p class="text-white">
++You can unsubscribe at any time by clicking the link in the footer of
++        our emails. For information about our privacy practices, please visit
++        our website.
++</p> <p class="text-white">
++We use Mailchimp as our marketing platform. By clicking below to
++        subscribe, you acknowledge that your information will be transferred to
++        Mailchimp for processing. <a href="https://mailchimp.com/legal/terms">Learn more about Mailchimp's privacy practices here.</a> </p> <div class="flex gap-8"> <button type="submit" class="linaro-gradient-button" id="contact-submit">Subscribe</button> <button type="button" class="linaro-gradient-button flex justify-start items-center gap-2 hidden" id="contact-submitting"> <svg aria-hidden="true" class="w-4 h-4 text-gray-200 animate-spin fill-white" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"></path> <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"></path> </svg>
++Submitting</button> <button class="text-white font-bold" onclick="window.insight.close()">
++Close
++</button> </div> </div> <div id="contact-feedback" class="hidden"> <p id="contact-feedback-text" class="text-white"></p> <button class="text-white font-bold" onclick="window.insight.close()">
++Close
++</button> </div> </form> </div> </div> </dialog> </div> </li> </ul> <script type="module">["DOMContentLoaded","astro:after-swap"].forEach(c=>{document.addEventListener(c,o)});function o(){document.querySelectorAll("[data-contact-modal]").forEach(e=>{e.addEventListener("click",function(n){const t=e.getBoundingClientRect();t.top<=n.clientY&&n.clientY<=t.top+t.height&&t.left<=n.clientX&&n.clientX<=t.left+t.width||e.close()})})}
++//# sourceMappingURL=CardGrid.astro_astro_type_script_index_0_lang.-Ys6ukQY.js.map</script></div></div></section> </main>  <footer class="container mx-auto px-8 text-grey text-sm flex flex-col items-center mt-auto z-50"> <div class="fade-border"></div> <div class="pt-12 flex gap-16 xl:gap-24 justify-center lg:justify-between w-full"> <div class="max-w-[30ch]"> <a href="/" class="text-lg"><img src="https://res.cloudinary.com/dl7c2wmhi/image/upload/v1/linaro-website/graphics/logo-white?_a=DATAiZXyZAA0" loading="lazy" decoding="async" alt="Linaro Logo" class="h-auto w-[125px] xl:w-[150px] mb-8" width="500" height="500"></a> <p>Linaro Limited</p> <p>Harston Mill, Harston</p> <p class="mb-4">Cambridgeshire, CB22 7GG, UK</p> <ul class="not-prose flex flex-wrap gap-6 justify-start"><li class="border-grey border-none"><a href="https://x.com/linaroorg" target="_blank" aria-label="X"><svg width="15" height="15" class="text-grey hover:text-linaro-yellow" data-icon="X">   <symbol id="ai:local:X" viewBox="0 0 110.38 99.79"><path fill="currentColor" d="M110.38 99.77h-1.51c-10.38 0-20.77-.02-31.15.03-1.06 0-1.68-.34-2.3-1.16-8.37-11-16.78-21.97-25.18-32.95-.17-.22-.36-.44-.61-.75-1.57 1.79-3.11 3.53-4.64 5.28-8.33 9.52-16.66 19.03-24.97 28.56-.61.7-1.23 1.03-2.19 1.01-4.74-.05-9.49-.02-14.23-.02H2.19C15.46 84.6 28.55 69.64 41.73 54.58 27.87 36.46 14.03 18.37 0 .02h1.45c10.78 0 21.56 0 32.34-.02.85 0 1.36.27 1.86.93 7.6 10.09 15.23 20.17 22.86 30.25.15.2.31.38.54.67 1.74-1.98 3.44-3.91 5.13-5.85C71.49 17.65 78.81 9.3 86.09.93 86.7.23 87.32 0 88.22 0c4.74.04 9.49.02 14.23.02h1.41C91.43 14.23 79.19 28.21 66.89 42.27c14.46 19.11 28.89 38.19 43.5 57.5ZM90.3 89.62c-.34-.48-.51-.75-.7-.99L50.55 37.01c-6.67-8.82-13.35-17.63-19.99-26.47-.53-.7-1.06-.99-1.95-.97-2.62.07-5.24.02-7.87.03-.26 0-.51.05-.86.09.2.29.3.47.43.64 13.02 17.02 26.05 34.04 39.07 51.06 7 9.15 14 18.3 21.02 27.44.24.32.62.74.94.74 2.9.06 5.8.03 8.95.03Z" class="cls-1"/></symbol><use href="#ai:local:X"></use>  </svg></a></li><li class="border-grey border-none"><a href="https://www.facebook.com/LinaroOrg" target="_blank" aria-label="Facebook"><svg width="15" height="15" class="text-grey hover:text-linaro-yellow" data-icon="facebook">   <symbol id="ai:local:facebook" viewBox="0 0 17 26"><path fill="currentColor" d="M12.113 5.685q-.379 0-.92.351-.542.353-.542 1.056V8.5h4.277v5.63h-4.277V25.5h-5.63V14.13H.744V8.5h4.277V5.685q0-1.083.487-2.112a5.6 5.6 0 0 1 1.38-1.814A7.3 7.3 0 0 1 8.974.487 6.8 6.8 0 0 1 11.572 0h4.764v5.685z"/></symbol><use href="#ai:local:facebook"></use>  </svg></a></li><li class="border-grey border-none"><a href="https://www.linkedin.com/company/linaro" target="_blank" aria-label="LinkedIn"><svg width="15" height="15" class="text-grey hover:text-linaro-yellow" data-icon="linkedin">   <symbol id="ai:local:linkedin" viewBox="0 0 26 26"><path fill="currentColor" d="M.336 7.069h5.612v18.347H.336zm21.53 1.133q1.673.918 2.753 2.78 1.079 1.86 1.079 3.803v10.63h-5.666v-10.63q0-.431-.324-.97-.324-.54-.593-.702-.432-.27-1.188-.27t-1.187.216l-2.32 1.133v11.224H8.754V7.069h5.666v.863q1.673-.755 3.777-.701t3.67.971M3.142 0q1.187 0 1.996.81.81.809.81 1.996t-.81 2.024-1.996.836q-1.187 0-1.997-.836-.81-.837-.81-2.024t.81-1.997T3.142 0"/></symbol><use href="#ai:local:linkedin"></use>  </svg></a></li><li class="border-grey border-none"><a href="https://www.youtube.com/linaroorg" target="_blank" aria-label="YouTube"><svg width="15" height="15" class="text-grey hover:text-linaro-yellow" data-icon="youtube">   <symbol id="ai:local:youtube" viewBox="0 0 27 26"><path fill="currentColor" d="M1.993 0h2.323l1.512 5.239h.162L7.448 0H9.77l-2.7 7.669v5.4H4.748V7.885zm7.94 5.617q0-1.134.863-1.783.81-.648 2.214-.648 1.35 0 2.107.702.81.756.81 1.783v5.022q0 1.242-.756 1.89-.864.756-2.215.756t-2.214-.756q-.81-.702-.81-1.944zm2.16 5.184q0 .432.215.648a.7.7 0 0 0 .243.162q.135.054.405.054.38 0 .649-.27.215-.162.215-.594V5.563q0-.325-.216-.487-.215-.216-.648-.216-.432 0-.648.216-.216.162-.216.487zM23.54 3.402v9.667h-2.106v-1.08q-.486.594-1.188.918a2.46 2.46 0 0 1-1.188.324q-.648 0-1.08-.432-.378-.54-.378-1.296v-8.1h2.106V10.8q0 .432.108.486a.58.58 0 0 0 .432.162q.162 0 .594-.162.432-.324.594-.54V3.402zM7.016 13.34H.697v1.674h2.106v10.153h2.053V15.013h2.16zm4.212 9.721a1.3 1.3 0 0 1-.594.486q-.27.162-.486.162a.9.9 0 0 1-.378-.108 1.1 1.1 0 0 1-.108-.486v-6.696H7.826v7.344q0 .756.324 1.134.324.432.972.432.54 0 1.026-.324a3.3 3.3 0 0 0 1.08-.81v.972h1.836v-8.748h-1.836zm8.047-6.21q-.54-.54-1.35-.54-.432 0-.864.216-.27.108-.756.594v-3.78h-1.836v11.826h1.836v-.648q.162.216.35.351.19.135.406.243.486.162.972.162.81 0 1.242-.486.432-.432.432-1.404v-4.86q0-1.08-.432-1.674m-1.458 6.264q0 .432-.162.594-.162.216-.486.216-.108 0-.432-.108-.162-.054-.432-.324v-5.454q.162-.162.378-.27.108-.054.378-.054.378 0 .594.216.162.27.162.702zm8.263-2.106v-2.214q0-1.188-.648-1.944-.756-.648-1.945-.649-1.296 0-1.998.703-.81.756-.81 1.89v3.888q0 1.188.702 1.998.756.756 1.944.756 1.35 0 2.053-.702.702-.648.702-2.052v-.432h-1.89v.432q0 .756-.163.972-.215.216-.648.216-.432 0-.648-.27-.162-.216-.162-.918v-1.674zm-3.51-2.268q0-.54.215-.756.162-.27.594-.27.378 0 .648.27.162.27.162.756v.918h-1.62z"/></symbol><use href="#ai:local:youtube"></use>  </svg></a></li><li class="border-grey border-none"><a href="https://mastodon.social/@LinaroLtd" target="_blank" aria-label="Mastodon"><svg width="15" height="15" class="text-grey hover:text-linaro-yellow" data-icon="mastodon">   <symbol id="ai:local:mastodon" viewBox="0 0 480 511.475"><path fill="currentColor" d="M478.065 113.237c-7.393-54.954-55.29-98.266-112.072-106.656C356.413 5.162 320.121 0 236.043 0h-.626c-84.099 0-102.141 5.162-111.72 6.581C68.498 14.738 18.089 53.653 5.859 109.26c-5.882 27.384-6.51 57.747-5.416 85.594C2 234.794 2.302 274.662 5.93 314.438a563 563 0 0 0 13.09 78.437c11.625 47.653 58.686 87.311 104.793 103.494a281.07 281.07 0 0 0 153.315 8.09 224 224 0 0 0 16.578-4.533c12.368-3.929 26.855-8.323 37.507-16.043a1.2 1.2 0 0 0 .486-.928v-38.544a1.12 1.12 0 0 0-.437-.879 1.13 1.13 0 0 0-.957-.215 424.8 424.8 0 0 1-99.49 11.626c-57.665 0-73.172-27.361-77.611-38.75a120 120 0 0 1-6.745-30.549 1.05 1.05 0 0 1 .094-.51c.07-.161.178-.304.317-.415a1.1 1.1 0 0 1 .982-.213 417 417 0 0 0 97.865 11.624c7.927 0 15.834 0 23.761-.213 33.156-.928 68.105-2.625 100.722-8.997.816-.16 1.63-.301 2.327-.508 51.455-9.883 100.423-40.894 105.397-119.421.184-3.092.652-32.382.652-35.588.021-10.904 3.509-77.344-.511-118.166m-82.796 61.744V311.51h-54.104V179.003c0-27.897-11.627-42.126-35.273-42.126-25.998 0-39.018 16.834-39.018 50.073v72.534h-53.776V186.95c0-33.239-13.045-50.073-39.04-50.073-23.507 0-35.249 14.229-35.249 42.126V311.51H84.73V174.981q0-41.844 21.366-66.488c14.693-16.388 33.969-24.805 57.893-24.805 27.692 0 48.618 10.648 62.569 31.919l13.464 22.597 13.485-22.597c13.95-21.271 34.876-31.919 62.52-31.919 23.903 0 43.177 8.417 57.919 24.805q21.345 24.62 21.323 66.488"/></symbol><use href="#ai:local:mastodon"></use>  </svg></a></li></ul><ul class="not-prose flex flex-wrap mt-2 gap-6 justify-start"><li class="flex items-center gap-1"><a href="feed.xml" target="_blank" aria-label="RSS-feed" class="flex items-center hover:text-linaro-yellow"><svg width="15" height="15" class="text-current" data-icon="rss">   <symbol id="ai:local:rss" viewBox="0 0 32 32"><path fill="currentColor" d="M5 5v4c9.93 0 18 8.07 18 18h4C27 14.85 17.15 5 5 5m0 7v4c6.07 0 11 4.93 11 11h4c0-8.28-6.72-15-15-15m3 9a3 3 0 0 0 0 6 3 3 0 0 0 0-6"/></symbol><use href="#ai:local:rss"></use>  </svg>
++Feed
++</a></li><li class="flex items-center gap-1"><a href="rss/news.xml" target="_blank" aria-label="RSS-feed" class="flex items-center hover:text-linaro-yellow"><svg width="15" height="15" viewBox="0 0 32 32" class="text-current" data-icon="rss">   <use href="#ai:local:rss"></use>  </svg>
++News
++</a></li><li class="flex items-center gap-1"><a href="rss/blog.xml" target="_blank" aria-label="RSS-feed" class="flex items-center hover:text-linaro-yellow"><svg width="15" height="15" viewBox="0 0 32 32" class="text-current" data-icon="rss">   <use href="#ai:local:rss"></use>  </svg>
++Blog
++</a></li></ul> </div> <ul class="gap-8 hidden lg:flex mb-8"> <li class="max-w-[15ch]"> <p class="text-white text-[1rem] mb-4">Services</p> <ul> <li class="mb-2"> <a href="/services/consulting" class="hover:text-linaro-yellow"> Consulting </a>  </li><li class="mb-2"> <a href="/services/upstreaming-linux-kernel" class="hover:text-linaro-yellow"> Upstreaming Linux kernel Services </a>  </li><li class="mb-2"> <a href="/services/bsp-development" class="hover:text-linaro-yellow"> BSP Development </a>  </li><li class="mb-2"> <a href="/services/lts" class="hover:text-linaro-yellow"> Long Term Support </a>  </li><li class="mb-2"> <a href="/services/qualcomm-platform" class="hover:text-linaro-yellow"> Qualcomm Platform Services </a>  </li><li class="mb-2"> <a href="/services/nxp-platform-services" class="hover:text-linaro-yellow"> NXP Platform Services </a>  </li><li class="mb-2"> <a href="/services/testingandautomation" class="hover:text-linaro-yellow"> Test Automation </a>  </li><li class="mb-2"> <a href="/services/virtualization" class="hover:text-linaro-yellow"> Virtualization </a>  </li> </ul> </li><li class="max-w-[15ch]"> <p class="text-white text-[1rem] mb-4">Solutions</p> <ul> <li class="mb-2"> <a href="https://www.linaroforge.com" class="hover:text-linaro-yellow"> Linaro Forge </a>  </li><li class="mb-2"> <a href="/solutions/onelab" class="hover:text-linaro-yellow"> ONELab </a>  </li><li class="mb-2"> <a href="/solutions/oneboot" class="hover:text-linaro-yellow"> Unified Firmware Lifecycle </a>  </li><li class="mb-2"> <a href="/solutions/confidential-computing" class="hover:text-linaro-yellow"> Confidential Computing </a>  </li><li class="mb-2"> <a href="/solutions/cra" class="hover:text-linaro-yellow"> Cyber Resilience Act </a>  </li> </ul> </li><li class="max-w-[15ch]"> <p class="text-white text-[1rem] mb-4">Industries</p> <ul> <li class="mb-2"> <a href="/industries/industrial" class="hover:text-linaro-yellow"> Industrial </a>  </li><li class="mb-2"> <a href="/industries/automotive" class="hover:text-linaro-yellow"> Automotive </a>  </li><li class="mb-2"> <a href="/industries/client-devices" class="hover:text-linaro-yellow"> Client Devices </a>  </li><li class="mb-2"> <a href="/industries/enterprise" class="hover:text-linaro-yellow"> Enterprise </a>  </li> </ul> </li><li class="max-w-[15ch]"> <p class="text-white text-[1rem] mb-4">Resources</p> <ul> <li class="mb-2"> <a href="/downloads" class="hover:text-linaro-yellow"> Downloads </a>  </li><li class="mb-2"> <a href="/blog" class="hover:text-linaro-yellow"> Blog </a>  </li><li class="mb-2"> <a href="/whitepapers" class="hover:text-linaro-yellow"> White Papers </a>  </li><li class="mb-2"> <a href="/news" class="hover:text-linaro-yellow"> Newsroom </a>  </li><li class="mb-2"> <a href="/events" class="hover:text-linaro-yellow"> Events </a>  </li><li class="mb-2"> <a href="/training" class="hover:text-linaro-yellow"> Training </a>  </li> </ul> </li><li class="max-w-[15ch]"> <p class="text-white text-[1rem] mb-4">Company</p> <ul> <li class="mb-2"> <a href="/about" class="hover:text-linaro-yellow"> About </a>  </li><li class="mb-2"> <a href="/careers" class="hover:text-linaro-yellow"> Careers </a>  </li><li class="mb-2"> <a href="/contact" class="hover:text-linaro-yellow"> Contact Us </a>  </li> </ul> </li> </ul> </div> <a class="text-lg text-white my-8 flex lg:hidden items-center gap-2" href="/contact/#top-nav">Back to top<svg width="1em" height="1em" data-icon="mdi:arrow-up-right">   <symbol id="ai:mdi:arrow-up-right" viewBox="0 0 24 24"><path fill="currentColor" d="m21.5 9.5l-1.41 1.42L17 7.83v5.67a6.5 6.5 0 0 1-6.5 6.5H4v-2h6.5c2.5 0 4.5-2 4.5-4.5V7.83l-3.09 3.08L10.5 9.5L16 4z"/></symbol><use href="#ai:mdi:arrow-up-right"></use>  </svg></a> <div class="fade-border"></div> <div class="flex flex-col md:flex-row mb-12 md:mb-24 gap-4 xl:gap-24 items-center justify-start md:justify-between w-full mt-8"> <ul class="flex gap-4"> <li> <a href="/contact" class="hover:text-linaro-yellow"> Contact </a> </li><li> <a href="/legal" class="hover:text-linaro-yellow"> Legal </a> </li> </ul> <span>Copyright © 2026 Linaro Limited</span> </div> <!-- LinkedIn Insight Tag --> <script type="text/plain" data-category="marketing_cookies">
++    _linkedin_partner_id = "2545073";
++    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
++    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
++  </script> <script type="text/plain" data-category="marketing_cookies">
++    (function (l) {
++      if (!l) {
++        window.lintrk = function (a, b) {
++          window.lintrk.q.push([a, b]);
++        };
++        window.lintrk.q = [];
++      }
++      var s = document.getElementsByTagName("script")[0];
++      var b = document.createElement("script");
++      b.type = "text/javascript";
++      b.async = true;
++      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
++      s.parentNode.insertBefore(b, s);
++    })(window.lintrk);
++  </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2545073&fmt=gif"> </noscript> </footer> <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Bss181bL.js"></script> <script type="module">const r=document.querySelectorAll("[data-animate]"),i=new IntersectionObserver((t,s)=>{t.forEach(e=>{if(!(e.target instanceof HTMLElement))return;const a=e.target.dataset.animate;e.isIntersecting?(e.target.classList.add(a),e.target.classList.remove("invisible"),s.unobserve(e.target)):e.target.classList.remove(a)})},{rootMargin:"-300px 0px -300px 0px"});r.forEach(t=>{i.observe(t)});
++//# sourceMappingURL=BaseLayout.astro_astro_type_script_index_1_lang.Dl45coIv.js.map</script> </body> </html>
+\ No newline at end of file
+diff --git a/src/common/build.rs b/src/common/build.rs
+index 6c53fa7..be2cfa3 100644
+--- a/src/common/build.rs
++++ b/src/common/build.rs
+@@ -22,17 +22,10 @@ fn set_environments() {
+         }
+     }
+ 
+-    if let Ok(output) = Command::new("git")
+-        .arg("rev-parse")
+-        .arg("HEAD")
+-        .stdin(Stdio::null())
+-        .stderr(Stdio::null())
+-        .output()
+-    {
+-        if output.status.success() {
+-            if let Ok(git_hash) = std::str::from_utf8(output.stdout.as_slice()) {
+-                println!("cargo:rustc-env=PROJECT_HASH={git_hash}");
+-            }
+-        }
++    // This prototype deliberately performs no VCS commands during a build.
++    // A caller that needs an external build identifier may provide one.
++    println!("cargo:rerun-if-env-changed=VSNIC_BUILD_ID");
++    if let Ok(build_id) = std::env::var("VSNIC_BUILD_ID") {
++        println!("cargo:rustc-env=PROJECT_HASH={build_id}");
+     }
+ }
+diff --git a/src/common/src/lib.rs b/src/common/src/lib.rs
+index 389031d..3c50e26 100644
+--- a/src/common/src/lib.rs
++++ b/src/common/src/lib.rs
+@@ -64,6 +64,24 @@ pub const STAGE_2_PAGE_MASK: usize = !(STAGE_2_PAGE_SIZE - 1);
+ /// STACK_SIZE = STACK_PAGES << PAGE_SHIFT = STACK_PAGES * PAGE_SIZE
+ pub const STACK_PAGES: usize = 16;
+ 
++/// Fixed PCI BAR address used by the QEMU ivshmem transport.
++pub const SNIC_SHARED_MEMORY_BASE: usize = 0x3E00_0000;
++/// Size of the shared ivshmem object passed to QEMU.
++pub const SNIC_SHARED_MEMORY_SIZE: usize = 8 * 1024 * 1024;
++/// Shared ABI header occupies the first page.
++pub const SNIC_SHARED_HEADER_SIZE: usize = 0x1000;
++/// Page-aligned size reserved for one SPSC ring.
++pub const SNIC_SHARED_RING_STRIDE: usize = 0x101000;
++/// Two directional rings are assigned to each tenant.
++pub const SNIC_SHARED_RINGS_PER_TENANT: usize = 2;
++
++/// VirtIO console transports reserved for the two QEMU AP guests.
++///
++/// The addresses and interrupt IDs correspond to `virtio-mmio-bus.31` and
++/// `virtio-mmio-bus.23` on QEMU's `virt` machine.
++pub const QEMU_VIRTIO_CONSOLE_DEVICES: [(usize, u32); 2] =
++    [(0x0A00_3E00, 32 + 0x2F), (0x0A00_2E00, 32 + 0x27)];
++
+ pub type HypervisorKernelMainType = fn(&mut SystemInformation);
+ 
+ pub type GeneralPurposeRegisters = [u64; 32];
+@@ -120,7 +138,7 @@ pub struct SystemInformation {
+ 
+ /// For passing Linux Boot Information
+ #[repr(C)]
+-#[derive(Clone)]
++#[derive(Clone, Debug)]
+ pub struct LinuxBootInformation {
+     pub ram_physical_address: usize,
+     pub ram_size: usize,
+@@ -128,4 +146,6 @@ pub struct LinuxBootInformation {
+     pub dtb_address: usize,
+     pub mpidr_el1: u64,
+     pub virtio_int_id: u32,
++    pub virtio_console_base_address: usize,
++    pub virtio_console_int_id: u32,
+ }
+diff --git a/src/dts/virt-qemu-dumped.dtb b/src/dts/virt-qemu-dumped.dtb
+new file mode 100644
+index 0000000000000000000000000000000000000000..6e9c50751a2697ac1f8c3cd6063248a143a148d8
+GIT binary patch
+literal 1048576
+zcmeI&ON=B*c>v(7#@GxjW^IGPn8!e4z%aGUW7%CS1TBHE%)=KWAADKWRA<i=Q?IG2
+zp54K+G_tUKMB;$N-h8oE2rg(3h!fIsK;i;7BXP5kkSt#jJ^=pzsLbl>o@A%Gg|wG1
+zq?*jgc>EDxW@J`Y&yU~uoBypIuQDA})w@3!+pF>UllZKUR(t<gRqy&m<bPM{H3hGU
+z?H^QC?|M}|cx~)wKGT)><bL+~{_$vf{QQ-}<H_WH|K4b^ier0Cd9<zGekT8ht$enx
+zI@;&q-h4S6<xZq#9D9HNgQ{xB5q<CdZRE48E&t?KPQ~845#>3Tro8(0ax!fD+s~cB
+zVsa(p^shZ}^(1rkiR+t8X`l1yP3p;PasS}StLxPElcq0a<{<xB$IETT{G<51ux?i^
+zW54t>9}iYXv&E!;^LTkMJn5`y6Z1Od9sT!Ohw8DWlasntdT!4#z1#d>#C~<Ro*Z9k
+zgI3GYWInDlb`<3p%b1Ry>kp4^9enKS^&C&ODrLEC&-G@Wm$Jn=y)8D`M>&rr&bp)i
+zWHOpHWu^bTE=IFw^YFpoWXjn#QyU|v_tkP_eXX|h*u;K)Q@9>>iJfh#b^lkIu<JRU
+zjTuwRs;?9?=g|?fop9M^`<-LP#qy|_f7%^0E`yTJAM>e4$NaPIn16WTn9n>q=9{}?
+zzV5;?<2uT=uXH}&(jBwCiq3Bv%k@z)|GYb9xn!c~{4wiC$9!vd%s<YtMml%QYt2pI
+zm27kEcdV7iOT>%B++ls@{j4KqE}=~4pXUzibNhaplPmZ7*H?KtXF7k(9oFYxM#mlV
+z%u6fN`D5;|KHm`?cf`!ooay{AcUYhAjE*~ECV8gw$J}9kzAHNJh?&#RbpDt-tj~8x
+z#~m?qD4EV3GoRAg@Rio*<tXonnTIo-KjseW^F7gVN6hz@h!=^u!}`q5J7T`?!ZCMP
+zpZnc0-+$qlJFL%~P{%y;>wTv4pU)lE=U+v~9Wg&tB3>ls4(l@!J7QkBaLgUn=LfoD
+zK5@~QH+EQ`dEz?eS=MzFo%?*=*kOJCb$85oy({VbF?U#>d9ifN^T`Xx++lrwxI5-k
+z7mm5Z`pgToW1i1kIOY!Pv)>)_Z!R2jhxM6@qGO&Pzi`YQ*5^mMV}4@in9IrJ_}-0p
+zzx`;we3oYU?97*}e~I5V@;$xD?`?k%%8Gejvn;-=>^)ZBtEa2G)qF9!TMZ|Ncl*ox
+z(_wY1UMyydsPp-zZboR|V?P`F>6Pho@oD$7ZoB`5W<TRR9-s0Z^HToOk*O@pGKR-8
+zo4;A)eERopw57fIa8w`UxAshVbUo(iYcJP)q%y}gViTwLe^u3fzblm*hrI_;@qfyZ
+zlYe5Y<u{;{BO9~rLpj=q>ZNmjwo{DZp?W#vv-KkXP`!LnjpOaRW9hbQeA(C8dR^md
+z;-2cSYkXaCyT+HkaXe4uCUuRkiF>ME*Z7*ar|NZ$uPbiX_~KZO@6@^P8ebFlRK2e8
+zHE~bX>l$BI+^+Gp*Fn>7?^7|}7++ZfUyR*RX13EOe%s`tAO=`ctJQ9wh&tI}qzC2S
+zhqqar)pPwFwC$R0Q`Y<Mb=wDNv%Q`&*WN4QLhAiA4@An5W!so%?}vFHQj_oeZ8Xc;
+z@)u%VxAn`*U*!9@XUkQ;9u6k`TlKVFjD}V3#i*3i?#;(nZ(NJpT)7ow%XMFuqUgoJ
+z{N}Us;rLD*%lk+>rvGRdGM~rW`&Ras=PQr5Ce@`4d{N1=a?;E1s2O|xyXj&ysfYD=
+z9L1Y)UCVKuxj)74ZM_$d2a8n>YioQthU_~XoAEt}Y&o_)#vIMVW6YW*b&m1c?;PXg
+zI9qKyWdC_j+>TLZ81udNOn;sam26Y&N7L2tAigMM%7c-zuWXyon7pRX_8sSC)A!}r
+zFZcbJ^g1=xuWNs<`eixX^x2z7E^B1|4Ox=s;MQoEkA-}J&f}5FZ^uoW&g(75-qww^
+zRrX`dWzFUB-e|RqX_bjZwk<Dn$~BO65_&!McJSHjrf%=+vEPn0cmKU9dsA$;#@&xl
+z#Uoo6)1&cVdHbMnHgo8GAj;bFaXI!&+}M_s1)0ulvu#lv9*z2?&vlg&V>mCrg=e!S
+zMseECr*DqG7j^rSLDE;f<!pGTUX`)+hU4Sqs$P^#sW)5HO{N|9epNllVXb3E`L*n2
+z6SJ4)S$9+3d@J8>pJki!a^;<FpJQz6wA&o>TJWT9`-55AcU+s<bTj{7Rn_;m^FNQw
+zL42C})qlnQgRT6J*4a(@ccbiJt30p&oO|28J!hHEb@89&Z#}c}x1&6^xh{rrtbV>f
+zc>4OO{$7YVMYYBv=6A;O)tFz7dwYKE_5ORA-<fOS)tFyiPuufr^S_t*ow=4@jrq0b
+zE3ebMKHKxT>-@IcZ(pD3)LX>^aS=O_vfsQl<TEbYyfHo*Gxzfc`*uI?IqiPlyK+C<
+zX8O1I<o@OOY(0<GQSv#E&!?yRo2X?B@qFz!&;M+e?X%BZo3SbRd>(x%p2gRnoZS9$
+z?6)y<`%k@Td4F!(<vUBJ%;z(?IvPD+ANGgixGiRO9dkSyEbC?FvtF$0-uFKeUsATd
+z45W3bJB%+j^)#z)>b`WQ?#oTt<=B4u?l<55;*BppbMz12c>J9|{pXu6-}%fpzw^}l
+zzWV0F_kQp1e)iH!d4tH9`9%8I{9k|llW#r!wfy^D#>&s7;cPM=tVTD-b+tb@JY3Yv
+zWk0{PEUW$H=*xApKbalY<LYoS=nrSN>qWf&Rd)u<@uI)1>%(d>y|v!iFY|8NtoM%=
+z_1)uoI=o-4^RwgC{CL%$4kiIIzde{9M&!ZxxxxKqe>Sb+>qERo9?#<ucv#;X4eMuD
+z_vdw0PX{r={-j>ro<+R+Ru#sB;qCYnZc6uasGCElGj((|dbo0Xs8rr$vhuWke$^kx
+zJMMVhs><8!&B63e|GClO>h{SH`}0AO*xwAgnfX?JHeD@d<8fT}i^23(OnHA%AC8u*
+z#pveoYPRUdR7SJuvYISo3@4TMOTL_j!nSPm)@;kwVK7Gc7|k-i`wqreoBuzM-;57u
+zlfh_O#oxC3C1&Y6AJ-?tdMFo<^W~kb3hOxgqglRTuP=x7ezpvcXP3vzc|AQW`?I5?
+z^>$iKMz<D&RUH?WM1TMR0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+z0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZ
+zfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&U
+zAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C7
+z2oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N
+z0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+
+z009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBly
+zK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF
+z5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk
+z1PBlyK!5-N0t5&UAV7cs0RjXF5FkK+009C72oNAZfB*pk1PBlyK!5-N0t5&UAV7cs
+d0RjXF5FkK+009C72oNAZfB*pk1PD~s{{!^C^{W5?
+
+literal 0
+HcmV?d00001
+
+diff --git a/src/dts/virt-qemu-dumped.dts b/src/dts/virt-qemu-dumped.dts
+new file mode 100644
+index 0000000..d6d3f63
+--- /dev/null
++++ b/src/dts/virt-qemu-dumped.dts
+@@ -0,0 +1,451 @@
++/dts-v1/;
++
++/ {
++	interrupt-parent = <0x8005>;
++	dma-coherent;
++	model = "linux,dummy-virt";
++	#size-cells = <0x02>;
++	#address-cells = <0x02>;
++	compatible = "linux,dummy-virt";
++
++	psci {
++		migrate = <0xc4000005>;
++		cpu_on = <0xc4000003>;
++		cpu_off = <0x84000002>;
++		cpu_suspend = <0xc4000001>;
++		method = "smc";
++		compatible = "arm,psci-1.0", "arm,psci-0.2", "arm,psci";
++	};
++
++	memory@40000000 {
++		reg = <0x00 0x40000000 0x00 0x40000000>;
++		device_type = "memory";
++	};
++
++	platform-bus@c000000 {
++		interrupt-parent = <0x8005>;
++		ranges = <0x00 0x00 0xc000000 0x2000000>;
++		#address-cells = <0x01>;
++		#size-cells = <0x01>;
++		compatible = "qemu,platform", "simple-bus";
++	};
++
++	fw-cfg@9020000 {
++		dma-coherent;
++		reg = <0x00 0x9020000 0x00 0x18>;
++		compatible = "qemu,fw-cfg-mmio";
++	};
++
++	virtio_mmio@a000000 {
++		dma-coherent;
++		interrupts = <0x00 0x10 0x01>;
++		reg = <0x00 0xa000000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000200 {
++		dma-coherent;
++		interrupts = <0x00 0x11 0x01>;
++		reg = <0x00 0xa000200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000400 {
++		dma-coherent;
++		interrupts = <0x00 0x12 0x01>;
++		reg = <0x00 0xa000400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000600 {
++		dma-coherent;
++		interrupts = <0x00 0x13 0x01>;
++		reg = <0x00 0xa000600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000800 {
++		dma-coherent;
++		interrupts = <0x00 0x14 0x01>;
++		reg = <0x00 0xa000800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000a00 {
++		dma-coherent;
++		interrupts = <0x00 0x15 0x01>;
++		reg = <0x00 0xa000a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000c00 {
++		dma-coherent;
++		interrupts = <0x00 0x16 0x01>;
++		reg = <0x00 0xa000c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000e00 {
++		dma-coherent;
++		interrupts = <0x00 0x17 0x01>;
++		reg = <0x00 0xa000e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001000 {
++		dma-coherent;
++		interrupts = <0x00 0x18 0x01>;
++		reg = <0x00 0xa001000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001200 {
++		dma-coherent;
++		interrupts = <0x00 0x19 0x01>;
++		reg = <0x00 0xa001200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001400 {
++		dma-coherent;
++		interrupts = <0x00 0x1a 0x01>;
++		reg = <0x00 0xa001400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001600 {
++		dma-coherent;
++		interrupts = <0x00 0x1b 0x01>;
++		reg = <0x00 0xa001600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001800 {
++		dma-coherent;
++		interrupts = <0x00 0x1c 0x01>;
++		reg = <0x00 0xa001800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001a00 {
++		dma-coherent;
++		interrupts = <0x00 0x1d 0x01>;
++		reg = <0x00 0xa001a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001c00 {
++		dma-coherent;
++		interrupts = <0x00 0x1e 0x01>;
++		reg = <0x00 0xa001c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001e00 {
++		dma-coherent;
++		interrupts = <0x00 0x1f 0x01>;
++		reg = <0x00 0xa001e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002000 {
++		dma-coherent;
++		interrupts = <0x00 0x20 0x01>;
++		reg = <0x00 0xa002000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002200 {
++		dma-coherent;
++		interrupts = <0x00 0x21 0x01>;
++		reg = <0x00 0xa002200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002400 {
++		dma-coherent;
++		interrupts = <0x00 0x22 0x01>;
++		reg = <0x00 0xa002400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002600 {
++		dma-coherent;
++		interrupts = <0x00 0x23 0x01>;
++		reg = <0x00 0xa002600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002800 {
++		dma-coherent;
++		interrupts = <0x00 0x24 0x01>;
++		reg = <0x00 0xa002800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002a00 {
++		dma-coherent;
++		interrupts = <0x00 0x25 0x01>;
++		reg = <0x00 0xa002a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002c00 {
++		dma-coherent;
++		interrupts = <0x00 0x26 0x01>;
++		reg = <0x00 0xa002c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002e00 {
++		dma-coherent;
++		interrupts = <0x00 0x27 0x01>;
++		reg = <0x00 0xa002e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003000 {
++		dma-coherent;
++		interrupts = <0x00 0x28 0x01>;
++		reg = <0x00 0xa003000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003200 {
++		dma-coherent;
++		interrupts = <0x00 0x29 0x01>;
++		reg = <0x00 0xa003200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003400 {
++		dma-coherent;
++		interrupts = <0x00 0x2a 0x01>;
++		reg = <0x00 0xa003400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003600 {
++		dma-coherent;
++		interrupts = <0x00 0x2b 0x01>;
++		reg = <0x00 0xa003600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003800 {
++		dma-coherent;
++		interrupts = <0x00 0x2c 0x01>;
++		reg = <0x00 0xa003800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003a00 {
++		dma-coherent;
++		interrupts = <0x00 0x2d 0x01>;
++		reg = <0x00 0xa003a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003c00 {
++		dma-coherent;
++		interrupts = <0x00 0x2e 0x01>;
++		reg = <0x00 0xa003c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003e00 {
++		dma-coherent;
++		interrupts = <0x00 0x2f 0x01>;
++		reg = <0x00 0xa003e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	smmuv3@9050000 {
++		phandle = <0x8007>;
++		#iommu-cells = <0x01>;
++		dma-coherent;
++		interrupt-names = "eventq", "priq", "cmdq-sync", "gerror";
++		interrupts = <0x00 0x4a 0x01 0x00 0x4b 0x01 0x00 0x4c 0x01 0x00 0x4d 0x01>;
++		reg = <0x00 0x9050000 0x00 0x20000>;
++		compatible = "arm,smmu-v3";
++	};
++
++	pcie@10000000 {
++		iommu-map = <0x00 0x8007 0x00 0x10000>;
++		interrupt-map-mask = <0x1800 0x00 0x00 0x07>;
++		interrupt-map = <0x00 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x03 0x04 0x00 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x04 0x04 0x00 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x05 0x04 0x00 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x06 0x04 0x800 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x04 0x04 0x800 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x05 0x04 0x800 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x06 0x04 0x800 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x03 0x04 0x1000 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x05 0x04 0x1000 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x06 0x04 0x1000 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x03 0x04 0x1000 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x04 0x04 0x1800 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x06 0x04 0x1800 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x03 0x04 0x1800 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x04 0x04 0x1800 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x05 0x04>;
++		#interrupt-cells = <0x01>;
++		ranges = <0x1000000 0x00 0x00 0x00 0x3eff0000 0x00 0x10000 0x2000000 0x00 0x10000000 0x00 0x10000000 0x00 0x2eff0000 0x3000000 0x80 0x00 0x80 0x00 0x80 0x00>;
++		reg = <0x40 0x10000000 0x00 0x10000000>;
++		msi-map = <0x00 0x8006 0x00 0x10000>;
++		dma-coherent;
++		bus-range = <0x00 0xff>;
++		linux,pci-domain = <0x00>;
++		#size-cells = <0x02>;
++		#address-cells = <0x03>;
++		device_type = "pci";
++		compatible = "pci-host-ecam-generic";
++	};
++
++	pl031@9010000 {
++		clock-names = "apb_pclk";
++		clocks = <0x8000>;
++		interrupts = <0x00 0x02 0x04>;
++		reg = <0x00 0x9010000 0x00 0x1000>;
++		compatible = "arm,pl031", "arm,primecell";
++	};
++
++	pl011@9000000 {
++		clock-names = "uartclk", "apb_pclk";
++		clocks = <0x8000 0x8000>;
++		interrupts = <0x00 0x01 0x04>;
++		reg = <0x00 0x9000000 0x00 0x1000>;
++		compatible = "arm,pl011", "arm,primecell";
++	};
++
++	pmu {
++		interrupts = <0x01 0x07 0x04>;
++		compatible = "arm,armv8-pmuv3";
++	};
++
++	intc@8000000 {
++		phandle = <0x8005>;
++		interrupts = <0x01 0x09 0x04>;
++		reg = <0x00 0x8000000 0x00 0x10000 0x00 0x80a0000 0x00 0xf60000>;
++		#redistributor-regions = <0x01>;
++		compatible = "arm,gic-v3";
++		ranges;
++		#size-cells = <0x02>;
++		#address-cells = <0x02>;
++		interrupt-controller;
++		#interrupt-cells = <0x03>;
++
++		its@8080000 {
++			phandle = <0x8006>;
++			reg = <0x00 0x8080000 0x00 0x20000>;
++			#msi-cells = <0x01>;
++			msi-controller;
++			compatible = "arm,gic-v3-its";
++		};
++	};
++
++	flash@0 {
++		bank-width = <0x04>;
++		reg = <0x00 0x00 0x00 0x4000000 0x00 0x4000000 0x00 0x4000000>;
++		compatible = "cfi-flash";
++	};
++
++	cpus {
++		#size-cells = <0x00>;
++		#address-cells = <0x01>;
++
++		cpu-map {
++
++			socket0 {
++
++				cluster0 {
++
++					core0 {
++						cpu = <0x8004>;
++					};
++
++					core1 {
++						cpu = <0x8003>;
++					};
++
++					core2 {
++						cpu = <0x8002>;
++					};
++
++					core3 {
++						cpu = <0x8001>;
++					};
++				};
++			};
++		};
++
++		cpu@0 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8004>;
++			reg = <0x00>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@1 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8003>;
++			reg = <0x01>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@2 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8002>;
++			reg = <0x02>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@3 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8001>;
++			reg = <0x03>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++	};
++
++	timer {
++		interrupts = <0x01 0x0d 0x04 0x01 0x0e 0x04 0x01 0x0b 0x04 0x01 0x0a 0x04>;
++		always-on;
++		compatible = "arm,armv8-timer", "arm,armv7-timer";
++	};
++
++	apb-pclk {
++		phandle = <0x8000>;
++		clock-output-names = "clk24mhz";
++		clock-frequency = <0x16e3600>;
++		#clock-cells = <0x00>;
++		compatible = "fixed-clock";
++	};
++
++	aliases {
++		serial0 = "/pl011@9000000";
++	};
++
++	chosen {
++		stdout-path = "/pl011@9000000";
++		rng-seed = <0x615be7dc 0x93e17d3 0xb0dc53ab 0x84c5aee2 0x2f3abfff 0xc242c2ff 0xa5e5f0cc 0x5c39d883>;
++		kaslr-seed = <0x28f297d6 0x9d25a64a>;
++	};
++};
+diff --git a/src/dts/virt-qemu-new.dts b/src/dts/virt-qemu-new.dts
+new file mode 100644
+index 0000000..70a87dd
+--- /dev/null
++++ b/src/dts/virt-qemu-new.dts
+@@ -0,0 +1,455 @@
++/dts-v1/;
++
++/ {
++	interrupt-parent = <0x8005>;
++	dma-coherent;
++	model = "linux,dummy-virt";
++	#size-cells = <0x02>;
++	#address-cells = <0x02>;
++	compatible = "linux,dummy-virt";
++
++	psci {
++		migrate = <0xc4000005>;
++		cpu_on = <0xc4000003>;
++		cpu_off = <0x84000002>;
++		cpu_suspend = <0xc4000001>;
++		method = "smc";
++		compatible = "arm,psci-1.0", "arm,psci-0.2", "arm,psci";
++	};
++
++	memory@40000000 {
++		reg = <0x00 0x40000000 0x00 0x40000000>;
++		device_type = "memory";
++	};
++
++	platform-bus@c000000 {
++		interrupt-parent = <0x8005>;
++		ranges = <0x00 0x00 0xc000000 0x2000000>;
++		#address-cells = <0x01>;
++		#size-cells = <0x01>;
++		compatible = "qemu,platform", "simple-bus";
++	};
++
++	fw-cfg@9020000 {
++		dma-coherent;
++		reg = <0x00 0x9020000 0x00 0x18>;
++		compatible = "qemu,fw-cfg-mmio";
++	};
++
++	virtio_mmio@a000000 {
++		dma-coherent;
++		interrupts = <0x00 0x10 0x01>;
++		reg = <0x00 0xa000000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000200 {
++		dma-coherent;
++		interrupts = <0x00 0x11 0x01>;
++		reg = <0x00 0xa000200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000400 {
++		dma-coherent;
++		interrupts = <0x00 0x12 0x01>;
++		reg = <0x00 0xa000400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000600 {
++		dma-coherent;
++		interrupts = <0x00 0x13 0x01>;
++		reg = <0x00 0xa000600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000800 {
++		dma-coherent;
++		interrupts = <0x00 0x14 0x01>;
++		reg = <0x00 0xa000800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000a00 {
++		dma-coherent;
++		interrupts = <0x00 0x15 0x01>;
++		reg = <0x00 0xa000a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000c00 {
++		dma-coherent;
++		interrupts = <0x00 0x16 0x01>;
++		reg = <0x00 0xa000c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a000e00 {
++		dma-coherent;
++		interrupts = <0x00 0x17 0x01>;
++		reg = <0x00 0xa000e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001000 {
++		dma-coherent;
++		interrupts = <0x00 0x18 0x01>;
++		reg = <0x00 0xa001000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001200 {
++		dma-coherent;
++		interrupts = <0x00 0x19 0x01>;
++		reg = <0x00 0xa001200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001400 {
++		dma-coherent;
++		interrupts = <0x00 0x1a 0x01>;
++		reg = <0x00 0xa001400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001600 {
++		dma-coherent;
++		interrupts = <0x00 0x1b 0x01>;
++		reg = <0x00 0xa001600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001800 {
++		dma-coherent;
++		interrupts = <0x00 0x1c 0x01>;
++		reg = <0x00 0xa001800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001a00 {
++		dma-coherent;
++		interrupts = <0x00 0x1d 0x01>;
++		reg = <0x00 0xa001a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001c00 {
++		dma-coherent;
++		interrupts = <0x00 0x1e 0x01>;
++		reg = <0x00 0xa001c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a001e00 {
++		dma-coherent;
++		interrupts = <0x00 0x1f 0x01>;
++		reg = <0x00 0xa001e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002000 {
++		dma-coherent;
++		interrupts = <0x00 0x20 0x01>;
++		reg = <0x00 0xa002000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002200 {
++		dma-coherent;
++		interrupts = <0x00 0x21 0x01>;
++		reg = <0x00 0xa002200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002400 {
++		dma-coherent;
++		interrupts = <0x00 0x22 0x01>;
++		reg = <0x00 0xa002400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002600 {
++		dma-coherent;
++		interrupts = <0x00 0x23 0x01>;
++		reg = <0x00 0xa002600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002800 {
++		dma-coherent;
++		interrupts = <0x00 0x24 0x01>;
++		reg = <0x00 0xa002800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002a00 {
++		dma-coherent;
++		interrupts = <0x00 0x25 0x01>;
++		reg = <0x00 0xa002a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002c00 {
++		dma-coherent;
++		interrupts = <0x00 0x26 0x01>;
++		reg = <0x00 0xa002c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a002e00 {
++		dma-coherent;
++		interrupts = <0x00 0x27 0x01>;
++		reg = <0x00 0xa002e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003000 {
++		dma-coherent;
++		interrupts = <0x00 0x28 0x01>;
++		reg = <0x00 0xa003000 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003200 {
++		dma-coherent;
++		interrupts = <0x00 0x29 0x01>;
++		reg = <0x00 0xa003200 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003400 {
++		dma-coherent;
++		interrupts = <0x00 0x2a 0x01>;
++		reg = <0x00 0xa003400 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003600 {
++		dma-coherent;
++		interrupts = <0x00 0x2b 0x01>;
++		reg = <0x00 0xa003600 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003800 {
++		dma-coherent;
++		interrupts = <0x00 0x2c 0x01>;
++		reg = <0x00 0xa003800 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003a00 {
++		dma-coherent;
++		interrupts = <0x00 0x2d 0x01>;
++		reg = <0x00 0xa003a00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003c00 {
++		dma-coherent;
++		interrupts = <0x00 0x2e 0x01>;
++		reg = <0x00 0xa003c00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	virtio_mmio@a003e00 {
++		dma-coherent;
++		interrupts = <0x00 0x2f 0x01>;
++		reg = <0x00 0xa003e00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
++	smmuv3@9050000 {
++		phandle = <0x8007>;
++		#iommu-cells = <0x01>;
++		dma-coherent;
++		interrupt-names = "eventq", "priq", "cmdq-sync", "gerror";
++		interrupts = <0x00 0x4a 0x01 0x00 0x4b 0x01 0x00 0x4c 0x01 0x00 0x4d 0x01>;
++		reg = <0x00 0x9050000 0x00 0x20000>;
++		compatible = "arm,smmu-v3";
++	};
++
++	pcie@10000000 {
++		iommu-map = <0x00 0x8007 0x00 0x10000>;
++		interrupt-map-mask = <0x1800 0x00 0x00 0x07>;
++		interrupt-map = <0x00 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x03 0x04 0x00 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x04 0x04 0x00 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x05 0x04 0x00 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x06 0x04 0x800 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x04 0x04 0x800 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x05 0x04 0x800 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x06 0x04 0x800 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x03 0x04 0x1000 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x05 0x04 0x1000 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x06 0x04 0x1000 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x03 0x04 0x1000 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x04 0x04 0x1800 0x00 0x00 0x01 0x8005 0x00 0x00 0x00 0x06 0x04 0x1800 0x00 0x00 0x02 0x8005 0x00 0x00 0x00 0x03 0x04 0x1800 0x00 0x00 0x03 0x8005 0x00 0x00 0x00 0x04 0x04 0x1800 0x00 0x00 0x04 0x8005 0x00 0x00 0x00 0x05 0x04>;
++		#interrupt-cells = <0x01>;
++		ranges = <0x1000000 0x00 0x00 0x00 0x3eff0000 0x00 0x10000 0x2000000 0x00 0x10000000 0x00 0x10000000 0x00 0x2eff0000 0x3000000 0x80 0x00 0x80 0x00 0x80 0x00>;
++		reg = <0x40 0x10000000 0x00 0x10000000>;
++		msi-map = <0x00 0x8006 0x00 0x10000>;
++		dma-coherent;
++		bus-range = <0x00 0xff>;
++		linux,pci-domain = <0x00>;
++		#size-cells = <0x02>;
++		#address-cells = <0x03>;
++		device_type = "pci";
++		compatible = "pci-host-ecam-generic";
++	};
++
++	pl031@9010000 {
++		clock-names = "apb_pclk";
++		clocks = <0x8000>;
++		interrupts = <0x00 0x02 0x04>;
++		reg = <0x00 0x9010000 0x00 0x1000>;
++		compatible = "arm,pl031", "arm,primecell";
++	};
++
++	pl011@9000000 {
++		clock-names = "uartclk", "apb_pclk";
++		clocks = <0x8000 0x8000>;
++		interrupts = <0x00 0x01 0x04>;
++		reg = <0x00 0x9000000 0x00 0x1000>;
++		compatible = "arm,pl011", "arm,primecell";
++	};
++
++	pmu {
++		interrupts = <0x01 0x07 0x04>;
++		compatible = "arm,armv8-pmuv3";
++	};
++
++	intc@8000000 {
++		phandle = <0x8005>;
++		interrupts = <0x01 0x09 0x04>;
++		reg = <0x00 0x8000000 0x00 0x10000 0x00 0x80a0000 0x00 0xf60000>;
++		#redistributor-regions = <0x01>;
++		compatible = "arm,gic-v3";
++		ranges;
++		#size-cells = <0x02>;
++		#address-cells = <0x02>;
++		interrupt-controller;
++		#interrupt-cells = <0x03>;
++
++		its@8080000 {
++			phandle = <0x8006>;
++			reg = <0x00 0x8080000 0x00 0x20000>;
++			#msi-cells = <0x01>;
++			msi-controller;
++			compatible = "arm,gic-v3-its";
++		};
++	};
++
++	flash@0 {
++		bank-width = <0x04>;
++		reg = <0x00 0x00 0x00 0x4000000 0x00 0x4000000 0x00 0x4000000>;
++		compatible = "cfi-flash";
++	};
++
++	cpus {
++		#size-cells = <0x00>;
++		#address-cells = <0x01>;
++
++		cpu-map {
++
++			socket0 {
++
++				cluster0 {
++
++					core0 {
++						cpu = <0x8004>;
++					};
++
++					core1 {
++						cpu = <0x8003>;
++					};
++
++					core2 {
++						cpu = <0x8002>;
++					};
++
++					core3 {
++						cpu = <0x8001>;
++					};
++				};
++			};
++		};
++
++		cpu@0 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8004>;
++			reg = <0x00>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@1 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8003>;
++			reg = <0x01>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@2 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8002>;
++			reg = <0x02>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++
++		cpu@3 {
++			next-level-cache = <0x00>;
++			i-cache-sets = <0x100>;
++			i-cache-size = <0xc000>;
++			i-cache-block-size = <0x40>;
++			d-cache-sets = <0x80>;
++			d-cache-size = <0x8000>;
++			d-cache-block-size = <0x40>;
++			phandle = <0x8001>;
++			reg = <0x03>;
++			enable-method = "psci";
++			compatible = "arm,cortex-a72";
++			device_type = "cpu";
++		};
++	};
++
++	timer {
++		interrupts = <0x01 0x0d 0x04 0x01 0x0e 0x04 0x01 0x0b 0x04 0x01 0x0a 0x04>;
++		always-on;
++		compatible = "arm,armv8-timer", "arm,armv7-timer";
++	};
++
++	apb-pclk {
++		phandle = <0x8000>;
++		clock-output-names = "clk24mhz";
++		clock-frequency = <0x16e3600>;
++		#clock-cells = <0x00>;
++		compatible = "fixed-clock";
++	};
++
++	aliases {
++		serial0 = "/pl011@9000000";
++	};
++
++	chosen {
++		// stdout-path = "/pl011@9000000";
++        bootargs = "console=ttyAMA0,115200n8 earlycon=pl011,mmio,0x9000000 initrd=/EFI/BOOT/initramfs root=fe01 rw rdinit=/bin/sh ignore_loglevel loglevel=8 initcall_debug nohlt";
++        // stub
++        linux,initrd-start = <0x0>;
++        linux,initrd-end = <0x0>;
++		rng-seed = <0x615be7dc 0x93e17d3 0xb0dc53ab 0x84c5aee2 0x2f3abfff 0xc242c2ff 0xa5e5f0cc 0x5c39d883>;
++		kaslr-seed = <0x28f297d6 0x9d25a64a>;
++	};
++};
+diff --git a/src/dts/virt-qemu.dts b/src/dts/virt-qemu.dts
+index 6695940..a43df87 100644
+--- a/src/dts/virt-qemu.dts
++++ b/src/dts/virt-qemu.dts
+@@ -20,12 +20,20 @@
+ 	};
+ 
+ 	virtio_mmio@a000000 {
++		status = "disabled";
+ 		dma-coherent;
+ 		interrupts = <0x00 0x00 0x01>;
+ 		reg = <0x00 0xa000000 0x00 0x200>;
+ 		compatible = "virtio,mmio";
+ 	};
+ 
++	virtio_console@eeeeeeeeeeeeeeee {
++		dma-coherent;
++		interrupts = <0x00 0x00 0x01>;
++		reg = <0x00 0x00 0x00 0x200>;
++		compatible = "virtio,mmio";
++	};
++
+ 	intc@8000000 {
+ 		phandle = <0x8005>;
+ 		interrupts = <0x01 0x09 0x04>;
+@@ -78,7 +86,7 @@
+ 	chosen {
+ 		stdout-path = "/pl011@9000000";
+ 		rng-seed = <0x40ec3684 0xfe54b5f 0x457abc31 0xacc6a4e2 0x9e0fb76 0xe0bdaeb8 0x906fbca9 0xaeb7c9b8>;
+-		bootargs = "earlycon=pl011,0x9000000 console=ttyAMA0 root=/dev/ram";
++		bootargs = "console=hvc0 rdinit=/init panic=-1";
+ 		kaslr-seed = <0x3928fc27 0x9caa495e>;
+ 		linux,initrd-start = <0x00 0x00>;
+ 		linux,initrd-end   = <0x00 0x00>;
+diff --git a/src/hypervisor_bootloader/Cargo.toml b/src/hypervisor_bootloader/Cargo.toml
+index ee7ad72..f0e12f5 100644
+--- a/src/hypervisor_bootloader/Cargo.toml
++++ b/src/hypervisor_bootloader/Cargo.toml
+@@ -22,7 +22,7 @@ edit_dtb_memory = []
+ save_dtb = []
+ raspberrypi = ["edit_dtb_memory", "save_dtb"]
+ embed_kernel = []
+-lwie_bf2 = ["virtio_net"]
++lwie_bf2 = []
+ 
+ [dependencies]
+ common = { path = "../common" }
+diff --git a/src/hypervisor_bootloader/build.rs b/src/hypervisor_bootloader/build.rs
+new file mode 100644
+index 0000000..fe5a173
+--- /dev/null
++++ b/src/hypervisor_bootloader/build.rs
+@@ -0,0 +1,29 @@
++use std::env;
++use std::path::PathBuf;
++use std::process::Command;
++
++const QEMU_DTS_NAME: &str = "virt-qemu.dts";
++const BF2_DTS_NAME: &str = "virt-bf2.dts";
++
++fn main() {
++    let dts_name = if env::var_os("CARGO_FEATURE_LWIE_BF2").is_some() {
++        BF2_DTS_NAME
++    } else {
++        QEMU_DTS_NAME
++    };
++    let source_dts = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
++        .join("../dts")
++        .join(dts_name);
++    let dest_dtb =
++        PathBuf::from(env::var_os("OUT_DIR").expect("OUT_DIR is not set")).join("virt.dtb");
++
++    println!("cargo:rerun-if-changed={}", source_dts.display());
++
++    let status = Command::new("dtc")
++        .args(["-I", "dts", "-O", "dtb", "-o"])
++        .arg(&dest_dtb)
++        .arg(&source_dts)
++        .status()
++        .expect("Failed to run dtc");
++    assert!(status.success(), "dtc command failed with status: {status}");
++}
+diff --git a/src/hypervisor_bootloader/src/boot_linux.rs b/src/hypervisor_bootloader/src/boot_linux.rs
+index 58924b5..593359e 100644
+--- a/src/hypervisor_bootloader/src/boot_linux.rs
++++ b/src/hypervisor_bootloader/src/boot_linux.rs
+@@ -31,9 +31,9 @@ struct LinuxHeader {
+     res5: u32,
+ }
+ 
+-pub fn boot_linux(boot_mpidr_el1: u64) {
++pub fn boot_linux(boot_mpidr_el1: u64, guest_index: u32) {
+     const RAM_SIZE: usize = 0x40000000;
+-    const ALIGN_SIZE: usize = 1 << 21;
++    const ALIGN_SIZE: usize = 2 << 20;
+ 
+     let image_handle = unsafe { crate::IMAGE_HANDLE };
+     let b_s = unsafe { &*(*crate::SYSTEM_TABLE).efi_boot_services };
+@@ -50,7 +50,7 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+ 
+     /* Load Kernel */
+     println!("Loading Kernel...");
+-    let kernel_address =
++    let mut kernel_address =
+         ((dtb_address + crate::virt::DTB_VIRT.len() - 1) & !(ALIGN_SIZE - 1)) + ALIGN_SIZE;
+     for (i, e) in LINUX_PATH.encode_utf16().enumerate() {
+         kernel_name_utf16[i] = e;
+@@ -72,12 +72,24 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+     if image_size == 0 {
+         text_offset = 0x80000;
+     }
+-    let boot_address = kernel_address + text_offset as usize;
++    // ARM64 Image starts at text_offset from a 2 MiB-aligned base. The entry
++    // is the beginning of the Image, not text_offset bytes into the file.
++    if text_offset != 0 {
++        unsafe {
++            core::ptr::copy(
++                kernel_address as *const u8,
++                (kernel_address + text_offset as usize) as *mut u8,
++                kernel_size,
++            );
++        }
++        kernel_address += text_offset as usize;
++    }
++    let boot_address = kernel_address;
+ 
+     /* Load Initramfs */
+     println!("Loading initramfs...");
+     let initramfs_address =
+-        ((kernel_address + kernel_size - 1) & !(ALIGN_SIZE - 1)) + ALIGN_SIZE * 2;
++        ((kernel_address + kernel_size.max(image_size as usize) - 1) & !(ALIGN_SIZE - 1)) + ALIGN_SIZE * 2;
+     for (i, e) in LINUX_INITRAMFS.encode_utf16().enumerate() {
+         initramfs_name_utf16[i] = e;
+     }
+@@ -89,6 +101,7 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+         .unwrap();
+     assert_eq!(read_size, initramfs_size);
+     let initramfs_end = initramfs_address + initramfs_size;
++    assert!(initramfs_end <= ram_address + RAM_SIZE, "guest images exceed assigned RAM");
+ 
+     /* Load DTB */
+     println!("Loading DTB...");
+@@ -140,7 +153,9 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+         .expect("Failed to edit CPU's reg");
+ 
+     /* Modify VirtIO-MMIO */
+-    let virtio_int_id = AP_VIRTIO_INTID_BASE + (boot_mpidr_el1 as u32 - 1);
++    // let virtio_int_id = AP_VIRTIO_INTID_BASE + (boot_mpidr_el1 as u32 - 1);
++    let virtio_int_id = AP_VIRTIO_INTID_BASE + guest_index;
++    println!("Setup VirtIO-MMIO with INTID: {}", virtio_int_id);
+     let virtio_node = dtb_analyzer
+         .get_root_node()
+         .get_search_holder()
+@@ -157,6 +172,41 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+         )
+         .expect("Failed to edit Virtio interrupts");
+ 
++    #[cfg(not(feature = "lwie_bf2"))]
++    let (virtio_console_base_address, virtio_console_int_id) = {
++        let console_index = guest_index
++            .checked_sub(1)
++            .expect("Guest index must start at one") as usize;
++        let (base_address, int_id) = common::QEMU_VIRTIO_CONSOLE_DEVICES
++            .get(console_index)
++            .copied()
++            .expect("A QEMU VirtIO console is not assigned to this guest");
++        let console_node = dtb_analyzer
++            .get_root_node()
++            .get_search_holder()
++            .unwrap()
++            .search_next_device_by_node_name(b"virtio_console", &dtb_analyzer)
++            .unwrap()
++            .unwrap();
++        console_node
++            .edit_offset(base_address)
++            .expect("Failed to edit VirtIO console offset");
++        console_node
++            .edit_reg(&dtb_analyzer, 0, base_address, 0x200)
++            .expect("Failed to edit VirtIO console MMIO range");
++        console_node
++            .edit_property(
++                &dtb_analyzer,
++                b"interrupts",
++                1,
++                int_id - 32, /* SPI Base */
++            )
++            .expect("Failed to edit VirtIO console interrupt");
++        (base_address, int_id)
++    };
++    #[cfg(feature = "lwie_bf2")]
++    let (virtio_console_base_address, virtio_console_int_id) = (0, 0);
++
+     println!("Boot Linux...");
+     let linux_info = LinuxBootInformation {
+         ram_physical_address: ram_address,
+@@ -165,6 +215,8 @@ pub fn boot_linux(boot_mpidr_el1: u64) {
+         dtb_address,
+         mpidr_el1: boot_mpidr_el1,
+         virtio_int_id,
++        virtio_console_base_address,
++        virtio_console_int_id,
+     };
+     unsafe { asm!("hvc 0xFFE0", in("x0") &linux_info as *const _ as usize) };
+ }
+diff --git a/src/hypervisor_bootloader/src/dtb.rs b/src/hypervisor_bootloader/src/dtb.rs
+index 81b1393..ff6d60f 100644
+--- a/src/hypervisor_bootloader/src/dtb.rs
++++ b/src/hypervisor_bootloader/src/dtb.rs
+@@ -570,7 +570,7 @@ impl DtbNode {
+                 continue;
+             }
+             first = false;
+-            let c = if c < 9 { b'0' + c } else { b'a' + (c - 10) };
++            let c = if c <= 9 { b'0' + c } else { b'a' + (c - 10) };
+             if unsafe { *(pointer as *const u8) } == 0 {
+                 return Err(());
+             }
+diff --git a/src/hypervisor_bootloader/src/main.rs b/src/hypervisor_bootloader/src/main.rs
+index dcff650..0a4b8b3 100644
+--- a/src/hypervisor_bootloader/src/main.rs
++++ b/src/hypervisor_bootloader/src/main.rs
+@@ -73,6 +73,9 @@ extern "C" fn efi_main(image_handle: EfiHandle, system_table: *mut EfiSystemTabl
+         println!("Compiler Information: {compiler_info}");
+     }
+ 
++    let current_el = get_current_el();
++    println!("CurrentEL: EL{}", current_el >> 2);
++
+     assert_eq!(get_current_el() >> 2, 2, "Expected CurrentEL is EL2");
+ 
+     let allocated_memory_address = init_memory_pool(b_s);
+@@ -1154,10 +1157,18 @@ extern "C" fn el1_main() -> ! {
+     assert_eq!(get_current_el() >> 2, 1, "Failed to jump to EL1");
+     println!("Hello,world! from EL1");
+ 
+-    boot_linux::boot_linux(0x100);
+-    boot_linux::boot_linux(0x101);
+-    boot_linux::boot_linux(0x200);
+-    boot_linux::boot_linux(0x201);
++    // using only AP
++    // boot_linux::boot_linux(0x100);
++    // boot_linux::boot_linux(0x101);
++    // boot_linux::boot_linux(0x200);
++    // boot_linux::boot_linux(0x201);
++    boot_linux::boot_linux(0x01, 1);
++    boot_linux::boot_linux(0x02, 2);
++    println!("Boot Linux is finished! exiting ...");
++
++    for _ in 0..3000000 {
++        core::hint::spin_loop();
++    }
+ 
+     exit_bootloader();
+ }
+diff --git a/src/hypervisor_bootloader/src/virt.rs b/src/hypervisor_bootloader/src/virt.rs
+index 59239d0..b9d9280 100644
+--- a/src/hypervisor_bootloader/src/virt.rs
++++ b/src/hypervisor_bootloader/src/virt.rs
+@@ -1,3 +1,6 @@
++pub const DTB_VIRT: &[u8] = include_bytes!(concat!(env!("OUT_DIR"), "/virt.dtb"));
++
++/*
+ pub const DTB_VIRT: [u8; 1751] = [
+     0xd0, 0x0d, 0xfe, 0xed, 0x00, 0x00, 0x06, 0xd7, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x05, 0x88,
+     0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00,
+@@ -110,3 +113,4 @@ pub const DTB_VIRT: [u8; 1751] = [
+     0x73, 0x74, 0x61, 0x72, 0x74, 0x00, 0x6c, 0x69, 0x6e, 0x75, 0x78, 0x2c, 0x69, 0x6e, 0x69, 0x74,
+     0x72, 0x64, 0x2d, 0x65, 0x6e, 0x64, 0x00,
+ ];
++*/
+diff --git a/src/hypervisor_kernel/src/boot_linux.rs b/src/hypervisor_kernel/src/boot_linux.rs
+index d65d180..47415c9 100644
+--- a/src/hypervisor_kernel/src/boot_linux.rs
++++ b/src/hypervisor_kernel/src/boot_linux.rs
+@@ -16,13 +16,13 @@ use crate::psci::{PsciFunctionId, PsciReturnCode, call_psci_function};
+ use crate::{GeneralPurposeRegisters, allocate_memory, free_memory};
+ 
+ /// **Depended on the machine**: The base address of PL011
+-const PL011_BASE_ADDRESS: usize = 0x1000000;
++const PL011_BASE_ADDRESS: usize = if cfg!(feature = "lwie_bf2") { 0x1000000 } else { 0x09000000 };
+ /// **Depended on the machine**: The base address of GIC Distributor
+-const GICD_BASE_ADDRESS: usize = 0x12000000;
++const GICD_BASE_ADDRESS: usize = if cfg!(feature = "lwie_bf2") { 0x12000000 } else { 0x08000000 };
+ /// **Depended on the machine**: The base address of GIC Redistributor
+-const GICR_BASE_ADDRESS: usize = 0x12200000;
++const GICR_BASE_ADDRESS: usize = if cfg!(feature = "lwie_bf2") { 0x12200000 } else { 0x080a0000 };
+ /// **Depended on the machine**: The range of GIC Redistributor
+-const GICR_SIZE: usize = 0x00200000;
++const GICR_SIZE: usize = if cfg!(feature = "lwie_bf2") { 0x00200000 } else { 0x00f60000 };
+ /// **Depended on the machine**: The base address for virtio-mmio of BSP
+ const BSP_VIRTIO_BASE_ADDRESS: usize = 0x45000000;
+ /// **Depended on the machine**: The base number for init_id of BSP
+@@ -72,6 +72,8 @@ pub fn boot(regs: &mut GeneralPurposeRegisters) {
+     register_buffer.hcr_el2 = cpu::get_hcr_el2();
+     register_buffer.boot_info = unsafe { (*(regs[0] as *const LinuxBootInformation)).clone() };
+ 
++    println!("Boot Information: {:?}", &register_buffer.boot_info);
++
+     cpu::dsb();
+     /* Flush Memory Cache for Application Processors */
+     cpu::clean_data_cache_all();
+@@ -80,9 +82,12 @@ pub fn boot(regs: &mut GeneralPurposeRegisters) {
+         cpu::convert_virtual_address_to_physical_address_el2_read(cpu_boot as *const fn() as usize)
+             .expect("Failed to convert virtual address to real address");
+ 
++    let mpidr_el1 = unsafe { (*(regs[0] as *const LinuxBootInformation)).mpidr_el1 };
++    println!("Powering on the CPU (MPIDR={mpidr_el1:#X})");
++
+     let result = call_psci_function(
+         PsciFunctionId::CpuOn,
+-        unsafe { &*(regs[0] as *const LinuxBootInformation) }.mpidr_el1,
++        mpidr_el1,
+         cpu_boot_address_real_address as u64,
+         register_buffer as *const _ as usize as u64,
+     );
+@@ -123,11 +128,20 @@ pub fn boot(regs: &mut GeneralPurposeRegisters) {
+     }
+     unsafe { DEVICE_NUMBER += 1 };
+     crate::gic::add_gic_distributor_protector(boot_info.mpidr_el1, boot_info.virtio_int_id);
++    if boot_info.virtio_console_int_id != 0 {
++        crate::gic::add_gic_distributor_protector(
++            boot_info.mpidr_el1,
++            boot_info.virtio_console_int_id,
++        );
++    }
+ }
+ 
+ pub fn jump_to_linux(regs: &mut GeneralPurposeRegisters) {
+     let linux_info = unsafe { (*(regs[0] as *const HypervisorRegisters)).boot_info.clone() };
+-    let vttbr_el2 = paging::remake_stage2_page_table(true).expect("Failed to make page table");
++    // QEMU partitions start inaccessible; only their own RAM/devices are
++    // exposed below. This also prevents reaching another tenant's Linux RAM.
++    let vttbr_el2 = paging::remake_stage2_page_table(!cfg!(feature = "lwie_bf2"))
++        .expect("Failed to make page table");
+     cpu::set_vttbr_el2(vttbr_el2 as u64);
+ 
+     /* Map Address */
+@@ -139,6 +153,65 @@ pub fn jump_to_linux(regs: &mut GeneralPurposeRegisters) {
+     paging::remove_memory_access_trap(GICR_BASE_ADDRESS, GICR_SIZE)
+         .expect("Failed to map GIC Redistributor");
+ 
++    /*
++     * Start with the complete ivshmem BAR inaccessible, then expose only the
++     * ABI header and this tenant's M2S/S2M rings.  The two guest MPIDRs are
++     * deliberately identical to the one-based tenant IDs.
++     */
++    paging::add_memory_access_trap(
++        common::SNIC_SHARED_MEMORY_BASE,
++        common::SNIC_SHARED_MEMORY_SIZE,
++        false,
++        false,
++    )
++    .expect("Failed to isolate ivshmem");
++    paging::add_memory_access_trap(
++        common::SNIC_SHARED_MEMORY_BASE,
++        common::SNIC_SHARED_HEADER_SIZE,
++        true,
++        false,
++    )
++    .expect("Failed to expose the ivshmem header");
++    let tenant_index = (linux_info.mpidr_el1 as usize)
++        .checked_sub(1)
++        .expect("SNIC tenant IDs start at one");
++    assert!(tenant_index < 2, "Only two SNIC tenants are configured");
++    let tenant_ring_base = common::SNIC_SHARED_MEMORY_BASE
++        + common::SNIC_SHARED_HEADER_SIZE
++        + tenant_index
++            * common::SNIC_SHARED_RINGS_PER_TENANT
++            * common::SNIC_SHARED_RING_STRIDE;
++    paging::remove_memory_access_trap(
++        tenant_ring_base,
++        common::SNIC_SHARED_RINGS_PER_TENANT * common::SNIC_SHARED_RING_STRIDE,
++    )
++    .expect("Failed to expose tenant ivshmem rings");
++
++    // AP guests have no PCI devices. Deny ECAM so they cannot relocate BAR2
++    // and bypass the fixed-address ring partition above (QEMU virt highmem).
++    paging::add_memory_access_trap(0x40_1000_0000, 0x1000_0000, false, false)
++        .expect("Failed to isolate QEMU PCI configuration space");
++
++    /* Each AP guest may access only its assigned QEMU VirtIO console. */
++    if linux_info.virtio_console_base_address != 0 {
++        paging::remove_memory_access_trap(
++            linux_info.virtio_console_base_address & common::STAGE_2_PAGE_MASK,
++            common::STAGE_2_PAGE_SIZE,
++        )
++        .expect("Failed to expose the assigned VirtIO console");
++        for (base_address, _) in common::QEMU_VIRTIO_CONSOLE_DEVICES {
++            if base_address != linux_info.virtio_console_base_address {
++                paging::add_memory_access_trap(
++                    base_address & common::STAGE_2_PAGE_MASK,
++                    common::STAGE_2_PAGE_SIZE,
++                    false,
++                    false,
++                )
++                .expect("Failed to isolate the other VirtIO console");
++            }
++        }
++    }
++
+     /* Setup Virtio */
+     virtio_net::VirtioNetwork::setup_new_device(linux_info.virtio_int_id, AP_VIRTIO_BASE_ADDRESS);
+ 
+@@ -156,7 +229,7 @@ pub fn jump_to_linux(regs: &mut GeneralPurposeRegisters) {
+ }
+ 
+ /* cpu_boot must use position-relative code */
+-#[naked]
++#[unsafe(naked)]
+ extern "C" fn cpu_boot() {
+     unsafe {
+         core::arch::naked_asm!("
+diff --git a/src/hypervisor_kernel/src/drivers.rs b/src/hypervisor_kernel/src/drivers.rs
+index ab145f5..057b6aa 100644
+--- a/src/hypervisor_kernel/src/drivers.rs
++++ b/src/hypervisor_kernel/src/drivers.rs
+@@ -12,6 +12,7 @@
+ #[macro_use]
+ pub mod serial_port;
+ pub mod i210;
++pub mod ivshmem;
+ pub mod mt27800;
+ #[cfg(feature = "virtio")]
+ pub mod virtio;
+diff --git a/src/hypervisor_kernel/src/drivers/ivshmem.rs b/src/hypervisor_kernel/src/drivers/ivshmem.rs
+new file mode 100644
+index 0000000..b2e50de
+--- /dev/null
++++ b/src/hypervisor_kernel/src/drivers/ivshmem.rs
+@@ -0,0 +1,52 @@
++//! QEMU ivshmem BAR setup for the virtual SmartNIC transport.
++
++use core::ptr::{read_volatile, write_volatile};
++
++use crate::pci::get_ecam_target_address;
++
++pub const VENDOR_ID: u16 = 0x1AF4;
++pub const DEVICE_ID: u16 = 0x1110;
++
++const PCI_COMMAND: usize = 0x04;
++const PCI_COMMAND_MEMORY: u16 = 1 << 1;
++const PCI_BAR2: usize = 0x18;
++const PCI_BAR3: usize = 0x1C;
++
++/// Assign BAR2 after UEFI has exited.  QEMU's ivshmem-plain exposes the shared
++/// RAM through this 64-bit prefetchable BAR, but AArch64 firmware does not
++/// allocate it consistently.
++pub fn setup_device(ecam_address: usize, bus: u8, device: u8, function: u8) {
++    let config = get_ecam_target_address(ecam_address, bus, device, function);
++    let command = unsafe { read_volatile((config + PCI_COMMAND) as *const u16) };
++    let original_bar2 = unsafe { read_volatile((config + PCI_BAR2) as *const u32) };
++    let bar_flags = original_bar2 & 0xF;
++
++    assert_eq!(bar_flags & 0x6, 0x4, "ivshmem BAR2 must be 64-bit");
++    unsafe {
++        write_volatile(
++            (config + PCI_COMMAND) as *mut u16,
++            command & !PCI_COMMAND_MEMORY,
++        );
++        write_volatile(
++            (config + PCI_BAR2) as *mut u32,
++            common::SNIC_SHARED_MEMORY_BASE as u32 | bar_flags,
++        );
++        write_volatile((config + PCI_BAR3) as *mut u32, 0);
++        write_volatile(
++            (config + PCI_COMMAND) as *mut u16,
++            command | PCI_COMMAND_MEMORY,
++        );
++    }
++
++    let programmed_bar2 = unsafe { read_volatile((config + PCI_BAR2) as *const u32) };
++    assert_eq!(
++        programmed_bar2 & !0xF,
++        common::SNIC_SHARED_MEMORY_BASE as u32,
++        "failed to assign the ivshmem BAR"
++    );
++    println!(
++        "ivshmem BAR2: {:#X} ({} bytes)",
++        common::SNIC_SHARED_MEMORY_BASE,
++        common::SNIC_SHARED_MEMORY_SIZE
++    );
++}
+diff --git a/src/hypervisor_kernel/src/emulation.rs b/src/hypervisor_kernel/src/emulation.rs
+index 55ce57d..765b790 100644
+--- a/src/hypervisor_kernel/src/emulation.rs
++++ b/src/hypervisor_kernel/src/emulation.rs
+@@ -85,8 +85,7 @@ pub fn data_abort_handler(
+     };
+     pr_debug!(
+         "Target Instruction Address: {:#X} => {:#X}",
+-        elr,
+-        instruction_intermediate_physical_address
++        elr, instruction_intermediate_physical_address
+     );
+     let target_instruction_virtual_address =
+         get_virtual_address_to_access_ipa(instruction_intermediate_physical_address, false)?;
+diff --git a/src/hypervisor_kernel/src/main.rs b/src/hypervisor_kernel/src/main.rs
+index 541fe69..840a4c8 100644
+--- a/src/hypervisor_kernel/src/main.rs
++++ b/src/hypervisor_kernel/src/main.rs
+@@ -261,7 +261,7 @@ extern "C" fn synchronous_exception_handler(regs: &mut GeneralPurposeRegisters)
+             }
+         }
+         EC_DATA_ABORT => {
+-            pr_debug!("Data Abort");
++            // pr_debug!("Data Abort");
+             if let Err(e) =
+                 emulation::data_abort_handler(regs, esr_el2, elr_el2, far_el2, hpfar_el2, spsr_el2)
+             {
+diff --git a/src/hypervisor_kernel/src/pci.rs b/src/hypervisor_kernel/src/pci.rs
+index 7889587..d10edee 100644
+--- a/src/hypervisor_kernel/src/pci.rs
++++ b/src/hypervisor_kernel/src/pci.rs
+@@ -28,6 +28,10 @@ pub fn init_pci(ecam_address: usize, start_bus_number: u8, end_bus_number: u8) {
+             if vendor_id == drivers::i210::VENDOR_ID && device_id == drivers::i210::DEVICE_ID {
+                 #[cfg(feature = "i210")]
+                 drivers::i210::setup_device(ecam_address, bus, device, 0);
++            } else if vendor_id == drivers::ivshmem::VENDOR_ID
++                && device_id == drivers::ivshmem::DEVICE_ID
++            {
++                drivers::ivshmem::setup_device(ecam_address, bus, device, 0);
+             } else if vendor_id == drivers::mt27800::VENDOR_ID
+                 && device_id == drivers::mt27800::DEVICE_ID
+             {
+diff --git a/src/rust-toolchain.toml b/src/rust-toolchain.toml
+index 94a9cb5..2e4c24e 100644
+--- a/src/rust-toolchain.toml
++++ b/src/rust-toolchain.toml
+@@ -1,3 +1,4 @@
+ [toolchain]
++channel = "nightly-2026-08-30"
+ components = ["rustc", "cargo"]
+ targets = ["aarch64-unknown-uefi", "aarch64-unknown-none-softfloat"]
+diff --git a/src/xtask/src/main.rs b/src/xtask/src/main.rs
+index b8d00f5..2af235c 100755
+--- a/src/xtask/src/main.rs
++++ b/src/xtask/src/main.rs
+@@ -294,9 +294,11 @@ fn run(mut args: Args) {
+     let mut qemu = "qemu-system-aarch64".to_string();
+     let mut mount_directory = "bin/".to_string();
+     let mut smp = "4".to_string();
+-    let mut memory = "1G".to_string();
+-    let mut qemu_efi = "QEMU_EFI.fd".to_string();
++    let mut memory = "4G".to_string();
++    // Let QEMU resolve its bundled AArch64 EDK2 image from the firmware search path.
++    let mut qemu_efi = "edk2-aarch64-code.fd".to_string();
+     let mut is_debug = false;
++    let mut should_dump_dtb = false;
+ 
+     // Parse options
+     while let Some(v) = args.next() {
+@@ -315,31 +317,61 @@ fn run(mut args: Args) {
+             );
+         } else if v == "--debug" {
+             is_debug = true;
++        } else if v == "--dump-dtb" {
++            should_dump_dtb = true;
+         } else if v == "--bios" {
+             try_get_argument!(args, qemu_efi, "Failed to get the path of OVMF", 1);
+         }
+     }
+ 
++    let mut machine = "virt,virtualization=on,iommu=smmuv3,gic-version=3".to_string();
++    if should_dump_dtb {
++        machine.push_str(",dumpdtb=./dts/virt-qemu-dumped.dtb");
++    }
++
+     let mut qemu_command = Command::new(qemu);
+     qemu_command.args([
+         "-m",
+         memory.as_str(),
+         "-cpu",
+-        "a64fx",
++        // "a64fx",
++        "cortex-a72",
+         "-machine",
+-        "virt,virtualization=on,iommu=smmuv3",
++        // enable gicv3 temporary
++        machine.as_str(),
+         "-smp",
+         smp.as_str(),
+         "-nographic",
++        "-serial",
++        "mon:stdio",
++        "-chardev",
++        "pty,id=console1,path=/tmp/milvusvisor-ap1-console,mux=off",
++        "-device",
++        "virtio-serial-device,id=vserial1,bus=virtio-mmio-bus.31",
++        "-device",
++        "virtconsole,chardev=console1,bus=vserial1.0,name=guest1-console",
++        "-chardev",
++        "pty,id=console2,path=/tmp/milvusvisor-ap2-console,mux=off",
++        "-device",
++        "virtio-serial-device,id=vserial2,bus=virtio-mmio-bus.23",
++        "-device",
++        "virtconsole,chardev=console2,bus=vserial2.0,name=guest2-console",
+         "-bios",
+         qemu_efi.as_str(),
+         "-drive",
+         format!("file=fat:rw:{mount_directory},format=raw,media=disk").as_str(),
++        "--no-reboot",
++        "--no-shutdown",
+     ]);
+     if is_debug {
+         qemu_command.args(["-monitor", "telnet::1234,server,nowait"]);
+     }
+ 
++    if !should_dump_dtb {
++        println!("AP1 Linux console: screen /tmp/milvusvisor-ap1-console 115200");
++        println!("AP2 Linux console: screen /tmp/milvusvisor-ap2-console 115200");
++    }
++
+     let exit_status = qemu_command
+         .stdin(Stdio::inherit())
+         .stdout(Stdio::inherit())
+@@ -347,7 +379,7 @@ fn run(mut args: Args) {
+         .output()
+         .expect("Failed to run the emulator");
+     if !exit_status.status.success() {
+-        exit(exit_status.status.code().unwrap());
++        exit(exit_status.status.code().unwrap_or(0xdead));
+     }
+ }
+ 
+@@ -486,6 +518,7 @@ run:
+   (-d | --mount-directory) : Modify the directory path to mount as virtual FAT device
+   --bios path : Specify the OVMF image
+   --debug : Enable debug system
++  --dump-dtb : Dump the QEMU device tree to dts/virt-qemu-dumped.dtb and exit
+ 
+ write:
+   (-d | --device) : Specify the device to write (Required)

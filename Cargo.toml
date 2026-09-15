@@ -1,0 +1,13 @@
+[workspace]
+members = ["client", "vsnic-logic", "vsnic-vf", "libvsnic"]
+exclude = ["MilvusVisor/src"]
+resolver = "2"
+
+[workspace.dependencies]
+libvsnic = { path = "libvsnic" }
+libc = "=0.2.174"
+
+[profile.release]
+panic = "abort"
+strip = true
+lto = "thin"

@@ -1,0 +1,9 @@
+[package]
+name = "vsnic-logic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libvsnic.workspace = true
+libc.workspace = true
+
